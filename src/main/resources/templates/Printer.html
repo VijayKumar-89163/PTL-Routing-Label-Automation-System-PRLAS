@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Direct Text Printer</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f4f6f9; }
+        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); max-width: 500px; margin: 0 auto; }
+        .btn { padding: 12px 20px; font-size: 16px; cursor: pointer; background: #007bff; color: white; border: none; border-radius: 4px; width: 100%; margin-bottom: 10px; }
+        .btn-success { background: #28a745; }
+        .status { margin: 10px 0; font-weight: bold; }
+        .found { color: #28a745; }
+        .not-found { color: #dc3545; }
+        input[type="text"] { width: 95%; padding: 10px; font-size: 16px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>Direct Text Printer</h2>
+    
+    <!-- One-Time Connection Button -->
+    <button id="connectBtn" class="btn" onclick="autoConnectPrinter()">1. Connect Printer</button>
+    <div id="connStatus" class="status">Status: Printer Not Connected</div>
+    <hr>
+
+    <!-- Scanner Input -->
+    <h3>Enter Any Text</h3>
+    <input type="text" id="textInput" placeholder="Type anything (e.g. hello)" onkeypress="handleKeyPress(event)">
+    <button class="btn btn-success" onclick="processPrint()">Print Exact Text</button>
+
+    <!-- Output Display Screen -->
+    <div id="outputScreen"></div>
+</div>
+
+<script>
+let activeMode = null; // 'SERIAL' or 'BLUETOOTH'
+let serialWriter = null;
+let btCharacteristic = null;
+
+// Mobile Device Check
+const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+// 1. Printer Connection
+async function autoConnectPrinter() {
+    const statusDiv = document.getElementById('connStatus');
+
+    if (isMobile) {
+        // MOBILE / TABLET (Web Bluetooth)
+        try {
+            statusDiv.innerText = "Status: Scanning Bluetooth Devices...";
+            const device = await navigator.bluetooth.requestDevice({
+                acceptAllDevices: true,
+                optionalServices: [
+                    '000018f0-0000-1000-8000-00805f9b34fb',
+                    '00001101-0000-1000-8000-00805f9b34fb'
+                ]
+            });
+
+            statusDiv.innerText = "Status: Connecting to " + device.name;
+            const server = await device.gatt.connect();
+            const services = await server.getPrimaryServices();
+
+            for (let service of services) {
+                const characteristics = await service.getCharacteristics();
+                for (let c of characteristics) {
+                    if (c.properties.write || c.properties.writeWithoutResponse) {
+                        btCharacteristic = c;
+                        break;
+                    }
+                }
+                if (btCharacteristic) break;
+            }
+
+            if (btCharacteristic) {
+                activeMode = 'BLUETOOTH';
+                statusDiv.innerText = "Status: Connected via Bluetooth (" + device.name + ")";
+                statusDiv.className = "status found";
+            } else {
+                alert("Bluetooth device found, but write channel missing.");
+            }
+        } catch (err) {
+            console.error(err);
+            statusDiv.innerText = "Status: Mobile Bluetooth Connection Failed";
+            statusDiv.className = "status not-found";
+        }
+
+    } else {
+        // LAPTOP / PC (Web Serial)
+        try {
+            statusDiv.innerText = "Status: Selecting Serial COM Port...";
+            const port = await navigator.serial.requestPort();
+            await port.open({ baudRate: 9600 });
+            serialWriter = port.writable.getWriter();
+            
+            activeMode = 'SERIAL';
+            statusDiv.innerText = "Status: Connected via Laptop Serial Port";
+            statusDiv.className = "status found";
+        } catch (err) {
+            console.error(err);
+            statusDiv.innerText = "Status: Laptop Serial Connection Failed";
+            statusDiv.className = "status not-found";
+        }
+    }
+}
+
+// 2. Event Handlers
+function handleKeyPress(e) {
+    if (e.key === 'Enter') processPrint();
+}
+
+async function processPrint() {
+    const inputVal = document.getElementById('textInput').value.trim();
+    if (!inputVal) {
+        alert("Kripya text enter karein!");
+        return;
+    }
+
+    if (!activeMode) {
+        alert("Pehle '1. Connect Printer' button par click karke printer connect karein!");
+        return;
+    }
+
+    // Display Output on Screen
+    document.getElementById('outputScreen').innerHTML = `
+        <div class="status found" style="border: 1px green dashed; padding: 10px; margin-top: 10px;">
+            <p><strong>Printed Text:</strong> ${inputVal}</p>
+        </div>
+    `;
+
+    // Trigger Print Command (ONLY RAW TEXT)
+    await sendTSPLPrint(inputVal);
+    
+    // Clear Input Box
+    document.getElementById('textInput').value = '';
+}
+
+// 3. TSPL Raw Code Generator (ONLY EXACT TEXT PRINT)
+async function sendTSPLPrint(userText) {
+    // Label Size: 70mm x 48mm
+    // ONLY PRINTS THE EXACT USER TEXT (Font size 4)
+    const tsplCommand = 
+`SIZE 70 mm, 48 mm
+GAP 2 mm, 0
+CLS
+BLOCK 0,50,560,100,"4",0,1,1,2,"${userText}"
+PRINT 1,1
+`;
+
+    const bytes = new TextEncoder().encode(tsplCommand);
+
+    try {
+        if (activeMode === 'SERIAL' && serialWriter) {
+            await serialWriter.write(bytes);
+        } else if (activeMode === 'BLUETOOTH' && btCharacteristic) {
+            await btCharacteristic.writeValue(bytes);
+        }
+        console.log("Text Print Sent Successfully!");
+    } catch (err) {
+        alert("Print execution failed: " + err.message);
+    }
+}
+</script>
+
+</body>
+</html>
