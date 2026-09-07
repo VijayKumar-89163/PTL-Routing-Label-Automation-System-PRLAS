@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V-MART PRLAS | Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="container-fluid p-0 d-flex flex-column flex-lg-row min-vh-100">
+
+    <!-- Sidebar Navigation -->
+    <aside class="vm-sidebar p-3">
+        <div class="brand-box text-center py-3 mb-4 border-bottom border-light-subtle">
+            <div class="vm-logo mx-auto">V</div>
+            <h5 class="fw-bold m-0 mt-2 text-white">V-MART</h5>
+            <small class="text-light-50 fs-8">PRLAS System</small>
+        </div>
+        <nav class="nav flex-column gap-2">
+            <a class="nav-link" href="/ptl-dashboard"><i class="bi bi-grid-1x2-fill me-2"></i>Dashboard</a>
+            <a class="nav-link" href="/ptl-scanner"><i class="bi bi-qr-code-scan me-2"></i>PTL Scanner</a>
+            <button class="nav-link text-start btn border-0" data-bs-toggle="modal" data-bs-target="#csvUploadModal"><i class="bi bi-cloud-arrow-up-fill me-2"></i>CSV Upload</button>
+        </nav>
+    </aside>
+
+    <!-- Main Dashboard Workspace -->
+    <main class="flex-grow-1 p-3 p-md-4">
+
+        <h5 class="fw-bold mb-4 text-vm-navy">PTL DASHBOARD</h5>
+
+        <!-- Grid Cards Overview -->
+        <div class="row g-3 mb-4">
+            <div class="col-12 col-md-4">
+                <div class="card card-vm p-3 d-flex flex-row align-items-center gap-3">
+                    <div class="status-icon bg-success-subtle text-success"><i class="bi bi-printer-fill fs-4"></i></div>
+                    <div>
+                        <small class="text-muted fw-bold">PRINTER CONTROL</small>
+                        <h6 id="dashPrinterStatus" class="m-0 fw-bold text-success">CONNECTED</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="card card-vm p-3 d-flex flex-row align-items-center gap-3">
+                    <div class="status-icon bg-warning-subtle text-warning"><i class="bi bi-lightning-charge-fill fs-4"></i></div>
+                    <div>
+                        <small class="text-muted fw-bold">AUTO PRINT MODE</small>
+                        <h6 class="m-0 fw-bold text-dark">ENABLED</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="card card-vm p-3 d-flex flex-row align-items-center gap-3" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#csvUploadModal">
+                    <div class="status-icon bg-primary-subtle text-primary"><i class="bi bi-cloud-upload-fill fs-4"></i></div>
+                    <div>
+                        <small class="text-muted fw-bold">CSV MASTER IMPORT</small>
+                        <h6 class="m-0 fw-bold text-vm-primary">Upload Dataset <i class="bi bi-chevron-right fs-8"></i></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Action Links -->
+        <div class="row g-3">
+            <div class="col-12 col-md-6">
+                <div class="card card-vm p-4 text-center">
+                    <i class="bi bi-qr-code-scan fs-1 text-vm-primary mb-2"></i>
+                    <h6 class="fw-bold">PTL SCANNER MODULE</h6>
+                    <p class="text-muted fs-8">Open dedicated full-screen scanner interface for warehouse operations.</p>
+                    <a href="/ptl-scanner" class="btn btn-vm-primary w-50 mx-auto">Open Scanner</a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="card card-vm p-4 text-center">
+                    <i class="bi bi-file-earmark-spreadsheet fs-1 text-vm-primary mb-2"></i>
+                    <h6 class="fw-bold">BULK DATA IMPORT</h6>
+                    <p class="text-muted fs-8">Import lakhs of master records in seconds via Native Engine.</p>
+                    <button class="btn btn-outline-dark w-50 mx-auto" data-bs-toggle="modal" data-bs-target="#csvUploadModal">Upload CSV</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</div>
+
+<!-- CSV Upload Modal Window -->
+<div class="modal fade" id="csvUploadModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content card-vm border-0">
+            <div class="modal-header border-0">
+                <h6 class="modal-title fw-bold"><i class="bi bi-cloud-upload me-2"></i>Upload Master CSV</h6>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body text-center py-4">
+                <input type="file" id="modalCsvInput" class="form-control mb-3" accept=".csv">
+                <small class="text-muted d-block">Supports direct 5-second fast MySQL import engine</small>
+            </div>
+            <div class="modal-footer border-0">
+                <button type="button" class="btn btn-vm-primary w-100" onclick="uploadCsvFromModal()">Upload & Process</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script th:src="@{/js/app.js}"></script>
+</body>
+</html>

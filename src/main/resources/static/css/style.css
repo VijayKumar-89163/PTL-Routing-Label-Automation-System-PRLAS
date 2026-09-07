@@ -1,0 +1,90 @@
+:root {
+    --vm-burgundy: #800020;
+    --vm-burgundy-hover: #66001a;
+    --vm-navy: #0f2a4a;
+    --vm-bg-light: #f4f6f9;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--vm-bg-light);
+    color: #212529;
+}
+
+/* Sidebar Branding */
+.vm-sidebar {
+    background-color: var(--vm-burgundy);
+    min-width: 240px;
+}
+
+.vm-logo {
+    width: 48px;
+    height: 48px;
+    background-color: #FFFFFF;
+    color: var(--vm-burgundy);
+    font-weight: 900;
+    font-size: 1.8rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vm-sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 10px 14px;
+}
+
+.vm-sidebar .nav-link:hover, .vm-sidebar .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #FFFFFF;
+}
+
+/* Cards & Buttons */
+.card-vm {
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    background: #FFFFFF;
+}
+
+.btn-vm-primary {
+    background-color: var(--vm-burgundy);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+}
+
+.btn-vm-primary:hover {
+    background-color: var(--vm-burgundy-hover);
+    color: #FFFFFF;
+}
+
+.text-vm-primary { color: var(--vm-burgundy); }
+.text-vm-navy { color: var(--vm-navy); }
+
+.status-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 16 Zones Grid Styling */
+.zone-pair-badge {
+    background-color: #FFF5E6;
+    border: 1px solid #E69D00;
+    color: #7A4D00;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 6px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.fs-7 { font-size: 0.825rem; }
+.fs-8 { font-size: 0.75rem; }

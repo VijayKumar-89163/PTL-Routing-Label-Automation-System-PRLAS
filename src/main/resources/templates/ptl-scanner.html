@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V-MART PRLAS | Scanner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="container-fluid p-0 d-flex flex-column flex-lg-row min-vh-100">
+
+    <!-- Sidebar Navigation -->
+    <aside class="vm-sidebar p-3">
+        <div class="brand-box text-center py-3 mb-4 border-bottom border-light-subtle">
+            <div class="vm-logo mx-auto">V</div>
+            <h5 class="fw-bold m-0 mt-2 text-white">V-MART</h5>
+            <small class="text-light-50 fs-8">PRLAS System</small>
+        </div>
+        <nav class="nav flex-column gap-2">
+            <a class="nav-link active" href="/ptl-scanner"><i class="bi bi-qr-code-scan me-2"></i>PTL Scanner</a>
+            <a class="nav-link" href="/ptl-dashboard"><i class="bi bi-grid-1x2-fill me-2"></i>Dashboard</a>
+        </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow-1 p-3 p-md-4">
+
+        <!-- Printer Connection Status Header -->
+        <div class="card card-vm p-3 mb-3">
+            <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                    <div id="printerStatusBadge" class="status-icon bg-danger-subtle text-danger">
+                        <i class="bi bi-printer-fill fs-4"></i>
+                    </div>
+                    <div>
+                        <span class="fs-8 text-muted fw-bold">PRINTER STATUS</span>
+                        <h6 id="printerStatusText" class="m-0 fw-bold text-danger">DISCONNECTED</h6>
+                    </div>
+                </div>
+                <button class="btn btn-outline-dark btn-sm" onclick="connectPrinter()">
+                    <i class="bi bi-plug-fill me-1"></i> Connect Printer
+                </button>
+            </div>
+        </div>
+
+        <!-- LPN Barcode Input Card -->
+        <div class="card card-vm p-3 p-md-4 mb-3">
+            <h6 class="fw-bold mb-3"><i class="bi bi-qr-code-scan me-2 text-vm-primary"></i>SCAN LPN</h6>
+            <div class="row g-2 align-items-center">
+                <div class="col-12 col-md-8">
+                    <input type="text" id="lpnInput" class="form-control form-control-lg" placeholder="Scan or type LPN number and press Enter" onkeypress="if(event.key==='Enter') processLpnScan()">
+                </div>
+                <div class="col-6 col-md-2">
+                    <button class="btn btn-vm-primary w-100 py-2 fw-semibold" onclick="processLpnScan()"><i class="bi bi-search me-1"></i> Scan</button>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="form-check form-switch pt-1">
+                        <input class="form-check-input" type="checkbox" id="autoPrintCheck" checked>
+                        <label class="form-check-input-label fw-semibold fs-7" for="autoPrintCheck">Auto Print</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Result Card (Populates upon scanning) -->
+            <div id="resultCard" class="mt-4 p-3 rounded border" style="display: none;"></div>
+        </div>
+
+        <!-- Last 10 Scans History Table -->
+        <div class="card card-vm p-3 p-md-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h6 class="fw-bold m-0"><i class="bi bi-clock-history me-2 text-vm-primary"></i>LAST 10 SCANS</h6>
+                <button class="btn btn-sm btn-light border" onclick="fetchRecentScans()"><i class="bi bi-arrow-clockwise"></i> Refresh</button>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-hover align-middle border-0 m-0">
+                    <thead class="table-light fs-8">
+                    <tr>
+                        <th>LPN</th>
+                        <th>Group</th>
+                        <th>Location</th>
+                        <th>Zones (16 Zones / 8 Pairs)</th>
+                        <th>Scanned At</th>
+                    </tr>
+                    </thead>
+                    <tbody id="recentScansBody">
+                    <tr><td colspan="5" class="text-center py-3 text-muted">No scan records found</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script th:src="@{/js/app.js}"></script>
+</body>
+</html>
