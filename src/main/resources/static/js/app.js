@@ -131,15 +131,77 @@ async function printTsplLabel(data) {
         return;
     }
 
+    // Direct binding with Spring Boot LpnResponseDTO field names
+    const lpn = data.lpn || '';
+    const group = data.ptlGroup || '';
+    const location = data.location || ''; // Correctly mapped with LpnResponseDTO.java
+
+    // Extract zone pairs array (up to 16 pairs)
+    let zones = [];
+    if (data.ptlMergedGroups) {
+        zones = Array.isArray(data.ptlMergedGroups)
+            ? data.ptlMergedGroups
+            : data.ptlMergedGroups.toString().split(/,\s*|\s+/);
+    }
+
+    // 4x4 Grid Boxes layout parameters
+    const boxWidth = 110;
+    const boxHeight = 26;
+    const boxGapX = 15;
+    const startX = 35;
+    const startY = 185;
+    const rowGapY = 34;
+
+    let zonesTspl = "";
+    for (let i = 0; i < Math.min(zones.length, 16); i++) {
+        let row = Math.floor(i / 4);
+        let col = i % 4;
+
+        let x1 = startX + col * (boxWidth + boxGapX);
+        let y1 = startY + row * rowGapY;
+        let x2 = x1 + boxWidth;
+        let y2 = y1 + boxHeight;
+
+        // Center zone text inside box
+        let textX = x1 + Math.floor(boxWidth / 2);
+        let textY = y1 + 5;
+
+        zonesTspl += `BOX ${x1},${y1},${x2},${y2},2\n`;
+        zonesTspl += `TEXT ${textX},${textY},"2",0,1,1,2,"${zones[i]}"\n`;
+    }
+
+    // Format print Date and Time
+    const now = new Date();
+    const dateTimeStr = now.toLocaleDateString('en-GB') + '  ' + now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
+
     const tspl = `
 SIZE 70 mm, 48 mm
 GAP 2 mm, 0
+DIRECTION 0
 CLS
-TEXT 30,15,"3",0,1,1,"V-MART LOGISTICS"
-TEXT 30,40,"2",0,1,1,"LPN: ${data.lpn}"
-BARCODE 30,65,"128",35,1,0,2,2,"${data.lpn}"
-TEXT 30,110,"2",0,1,1,"GRP: ${data.ptlGroup} | LOC: ${data.location}"
-TEXT 30,135,"2",0,1,1,"ZONES: ${data.ptlMergedGroups}"
+
+BOX 20,10,540,370,3
+
+TEXT 280,18,"3",0,1,1,2,"V-MART PALWAL"
+BAR 20,45,520,2
+
+TEXT 35,62,"3",0,1,1,"LPN:"
+BARCODE 120,52,"128",32,1,0,2,2,"${lpn}"
+
+BAR 20,110,520,2
+
+TEXT 35,120,"3",0,1,1,"GRP: ${group}"
+TEXT 320,120,"3",0,1,1,"LOC: ${location}"
+
+BAR 20,150,520,2
+
+TEXT 35,160,"2",0,1,1,"ZONES:"
+
+${zonesTspl}
+
+BAR 20,332,520,2
+TEXT 35,342,"2",0,1,1,"Printed On:  ${dateTimeStr}"
+
 PRINT 1,1
 `;
 
@@ -147,7 +209,7 @@ PRINT 1,1
         await globalPrinterWriter.write(new TextEncoder().encode(tspl));
         notify("Label Sent to Printer", "success");
     } catch (e) {
-        notify("Printing Failed", "error");
+        notify("Printing Failed: " + e.message, "error");
     }
 }
 
