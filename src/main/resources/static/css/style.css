@@ -11,10 +11,26 @@ body {
     color: #212529;
 }
 
+/* ================================
+   Inline SVG Icons (replaces Bootstrap Icons font/CDN)
+   Sized like the old <i class="bi bi-*"> font icons: 1em = follows font-size
+   ================================ */
+.bi-icon {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    vertical-align: -0.125em;
+    display: inline-block;
+}
+
 /* Sidebar Branding */
 .vm-sidebar {
     background-color: var(--vm-burgundy);
     min-width: 240px;
+}
+
+.vm-sidebar .brand-box {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .vm-logo {
@@ -40,6 +56,22 @@ body {
 .vm-sidebar .nav-link:hover, .vm-sidebar .nav-link.active {
     background-color: rgba(255, 255, 255, 0.15);
     color: #FFFFFF;
+}
+
+/* Dashboard page: 2 remaining nav items (PTL Scanner, CSV Upload) placed
+   side by side instead of stacked, so the header/sidebar takes up less
+   vertical height — used only on ptl-dashboard.html */
+.vm-sidebar .sidebar-nav-compact {
+    flex-direction: row;
+}
+
+.vm-sidebar .sidebar-nav-compact .nav-link {
+    flex: 1 1 auto;
+    text-align: center;
+    justify-content: center;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    padding: 10px 8px;
 }
 
 /* Cards & Buttons */
@@ -88,3 +120,41 @@ body {
 
 .fs-7 { font-size: 0.825rem; }
 .fs-8 { font-size: 0.75rem; }
+
+/* ================================
+   MOBILE VIEW (< 992px, matches Bootstrap's lg breakpoint
+   where the sidebar stacks on top as a header)
+   ================================ */
+@media (max-width: 991.98px) {
+    /* Header collapses to just the logo block */
+    .vm-sidebar .brand-box {
+        border-bottom: none;      /* remove the white separator line */
+        margin-bottom: 0 !important;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    /* Hide PTL Scanner / Dashboard links on mobile header */
+    .vm-sidebar .sidebar-nav {
+        display: none;
+    }
+}
+
+/* ================================
+   PRINTER STATUS CARD - RESPONSIVE FIX
+   Prevents the "Connect Printer" button/row from overflowing on small screens
+   ================================ */
+@media (max-width: 575.98px) {
+    .printer-status-row {
+        flex-direction: column;
+        align-items: stretch !important;
+        gap: 12px;
+    }
+
+    .printer-status-row .btn {
+        width: 100%;
+        justify-content: center;
+        display: inline-flex;
+        align-items: center;
+    }
+}

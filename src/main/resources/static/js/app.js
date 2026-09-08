@@ -43,8 +43,46 @@ async function processLpnScan() {
         notify("Backend Connection Failure", "error");
     } finally {
         input.value = "";
-        input.focus();
+
+        // Close the mobile on-screen keyboard after every scan, then silently
+        // restore focus (without reopening the keyboard) so the field stays
+        // ready for the next scan. See hideKeyboardAndRefocus() below.
+        hideKeyboardAndRefocus(input);
     }
+}
+
+/**
+ * Hides the mobile virtual keyboard after a scan is processed.
+ *
+ * Why this is needed:
+ * On mobile browsers, a focused text input always opens the on-screen
+ * keyboard, which can cover half the screen. Simply calling blur() closes
+ * the keyboard but also removes focus, which breaks continuous scanning
+ * with hardware/Bluetooth barcode scanners (they type into whichever field
+ * currently has focus).
+ *
+ * How it works:
+ * 1. blur() immediately removes focus, which closes the keyboard.
+ * 2. After a short delay, the input is temporarily marked "readonly".
+ * 3. Focusing a "readonly" input does NOT trigger the mobile keyboard.
+ * 4. The "readonly" attribute is removed right after, so normal typing
+ *    and hardware-scanner input continue to work exactly as before.
+ *
+ * Net result: keyboard stays hidden, but the field is still focused and
+ * ready to receive the next scanned LPN.
+ *
+ * @param {HTMLInputElement} input - the LPN input field
+ */
+function hideKeyboardAndRefocus(input) {
+    input.blur();
+
+    setTimeout(() => {
+        input.setAttribute("readonly", "readonly");
+        input.focus();
+
+        // Remove readonly right after focus so scanning/typing works normally
+        setTimeout(() => input.removeAttribute("readonly"), 50);
+    }, 150);
 }
 
 // Render 16 Zones (8 Pairs Layout) inside Screen UI

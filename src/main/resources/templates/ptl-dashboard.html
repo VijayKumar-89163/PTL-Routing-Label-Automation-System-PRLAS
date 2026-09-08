@@ -4,26 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>V-MART PRLAS | Admin Dashboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- Local (self-hosted) CSS — no internet needed -->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/toastify.min.css}">
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
 
 <div class="container-fluid p-0 d-flex flex-column flex-lg-row min-vh-100">
 
-    <!-- Sidebar Navigation -->
+    <!-- Sidebar / Header -->
     <aside class="vm-sidebar p-3">
-        <div class="brand-box text-center py-3 mb-4 border-bottom border-light-subtle">
+        <div class="brand-box text-center py-3 mb-4">
             <div class="vm-logo mx-auto">V</div>
             <h5 class="fw-bold m-0 mt-2 text-white">V-MART</h5>
             <small class="text-light-50 fs-8">PRLAS System</small>
         </div>
-        <nav class="nav flex-column gap-2">
-            <a class="nav-link" href="/ptl-dashboard"><i class="bi bi-grid-1x2-fill me-2"></i>Dashboard</a>
-            <a class="nav-link" href="/ptl-scanner"><i class="bi bi-qr-code-scan me-2"></i>PTL Scanner</a>
-            <button class="nav-link text-start btn border-0" data-bs-toggle="modal" data-bs-target="#csvUploadModal"><i class="bi bi-cloud-arrow-up-fill me-2"></i>CSV Upload</button>
+
+        <!-- Only 2 links here: current page (Dashboard) is intentionally NOT
+             shown as a nav item, since linking to itself served no purpose.
+             The remaining 2 items sit side by side to keep header height low. -->
+        <nav class="nav gap-2 justify-content-center flex-wrap sidebar-nav-compact">
+            <a class="nav-link" href="/ptl-scanner">
+                <svg class="bi-icon me-2" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M0 .5A.5.5 0 0 1 .5 0h3a.5.5 0 0 1 0 1H1v2.5a.5.5 0 0 1-1 0v-3Zm12 0a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0V1h-2.5a.5.5 0 0 1-.5-.5ZM.5 12a.5.5 0 0 1 .5.5V15h2.5a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5Zm15 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H15v-2.5a.5.5 0 0 1 .5-.5ZM3 3h3v3H3V3Zm0 7h3v3H3v-3Zm7-7h3v3h-3V3ZM7 2H2v5h5V2Zm0 7H2v5h5V9Zm2-7h5v5H9V2ZM4 4h1v1H4V4Zm7 0h1v1h-1V4Zm-6 7H4v1h1v-1Zm3.5-3H8v2h1v1H8v1h2v-2h1v2h1v-1h2v-1h-3V8H8.5Zm1.5 2V9H9v1h1Zm4 2h-1v1h-2v1h3v-2Zm-4 2v-1H8v1h2Zm2-5h2V8h-2v1Z"/></svg>
+                PTL Scanner
+            </a>
+            <button class="nav-link btn border-0" data-bs-toggle="modal" data-bs-target="#csvUploadModal">
+                <svg class="bi-icon me-2" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2m2.354 5.146a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708l2-2a.5.5 0 0 1 .708 0z"/></svg>
+                CSV Upload
+            </button>
         </nav>
     </aside>
 
@@ -36,7 +46,9 @@
         <div class="row g-3 mb-4">
             <div class="col-12 col-md-4">
                 <div class="card card-vm p-3 d-flex flex-row align-items-center gap-3">
-                    <div class="status-icon bg-success-subtle text-success"><i class="bi bi-printer-fill fs-4"></i></div>
+                    <div class="status-icon bg-success-subtle text-success">
+                        <svg class="bi-icon fs-4" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M5 1a2 2 0 0 0-2 2v1h10V3a2 2 0 0 0-2-2H5zm6 8H5a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1z"/><path d="M0 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1v-2a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2H2a2 2 0 0 1-2-2V7zm2.5 1a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/></svg>
+                    </div>
                     <div>
                         <small class="text-muted fw-bold">PRINTER CONTROL</small>
                         <h6 id="dashPrinterStatus" class="m-0 fw-bold text-success">CONNECTED</h6>
@@ -46,7 +58,9 @@
 
             <div class="col-12 col-md-4">
                 <div class="card card-vm p-3 d-flex flex-row align-items-center gap-3">
-                    <div class="status-icon bg-warning-subtle text-warning"><i class="bi bi-lightning-charge-fill fs-4"></i></div>
+                    <div class="status-icon bg-warning-subtle text-warning">
+                        <svg class="bi-icon fs-4" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z"/></svg>
+                    </div>
                     <div>
                         <small class="text-muted fw-bold">AUTO PRINT MODE</small>
                         <h6 class="m-0 fw-bold text-dark">ENABLED</h6>
@@ -56,10 +70,15 @@
 
             <div class="col-12 col-md-4">
                 <div class="card card-vm p-3 d-flex flex-row align-items-center gap-3" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#csvUploadModal">
-                    <div class="status-icon bg-primary-subtle text-primary"><i class="bi bi-cloud-upload-fill fs-4"></i></div>
+                    <div class="status-icon bg-primary-subtle text-primary">
+                        <svg class="bi-icon fs-4" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 0a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 4.095 0 5.555 0 7.318 0 9.366 1.708 11 3.781 11H7.5V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11h4.188C14.502 11 16 9.57 16 7.773c0-1.636-1.242-2.969-2.834-3.194C12.923 1.999 10.69 0 8 0m-.5 14.5V11h1v3.5a.5.5 0 0 1-1 0"/></svg>
+                    </div>
                     <div>
                         <small class="text-muted fw-bold">CSV MASTER IMPORT</small>
-                        <h6 class="m-0 fw-bold text-vm-primary">Upload Dataset <i class="bi bi-chevron-right fs-8"></i></h6>
+                        <h6 class="m-0 fw-bold text-vm-primary">
+                            Upload Dataset
+                            <svg class="bi-icon fs-8" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/></svg>
+                        </h6>
                     </div>
                 </div>
             </div>
@@ -69,7 +88,7 @@
         <div class="row g-3">
             <div class="col-12 col-md-6">
                 <div class="card card-vm p-4 text-center">
-                    <i class="bi bi-qr-code-scan fs-1 text-vm-primary mb-2"></i>
+                    <svg class="bi-icon fs-1 text-vm-primary mb-2 mx-auto" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M0 .5A.5.5 0 0 1 .5 0h3a.5.5 0 0 1 0 1H1v2.5a.5.5 0 0 1-1 0v-3Zm12 0a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0V1h-2.5a.5.5 0 0 1-.5-.5ZM.5 12a.5.5 0 0 1 .5.5V15h2.5a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5Zm15 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H15v-2.5a.5.5 0 0 1 .5-.5ZM3 3h3v3H3V3Zm0 7h3v3H3v-3Zm7-7h3v3h-3V3ZM7 2H2v5h5V2Zm0 7H2v5h5V9Zm2-7h5v5H9V2ZM4 4h1v1H4V4Zm7 0h1v1h-1V4Zm-6 7H4v1h1v-1Zm3.5-3H8v2h1v1H8v1h2v-2h1v2h1v-1h2v-1h-3V8H8.5Zm1.5 2V9H9v1h1Zm4 2h-1v1h-2v1h3v-2Zm-4 2v-1H8v1h2Zm2-5h2V8h-2v1Z"/></svg>
                     <h6 class="fw-bold">PTL SCANNER MODULE</h6>
                     <p class="text-muted fs-8">Open dedicated full-screen scanner interface for warehouse operations.</p>
                     <a href="/ptl-scanner" class="btn btn-vm-primary w-50 mx-auto">Open Scanner</a>
@@ -77,7 +96,7 @@
             </div>
             <div class="col-12 col-md-6">
                 <div class="card card-vm p-4 text-center">
-                    <i class="bi bi-file-earmark-spreadsheet fs-1 text-vm-primary mb-2"></i>
+                    <svg class="bi-icon fs-1 text-vm-primary mb-2 mx-auto" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V9H3V2a1 1 0 0 1 1-1h5.5zM3 12v-2h2v2zm0 1h2v2H4a1 1 0 0 1-1-1zm3 2v-2h3v2zm4 0v-2h3v1a1 1 0 0 1-1 1zm3-3h-3v-2h3zm-7 0v-2h3v2z"/></svg>
                     <h6 class="fw-bold">BULK DATA IMPORT</h6>
                     <p class="text-muted fs-8">Import lakhs of master records in seconds via Native Engine.</p>
                     <button class="btn btn-outline-dark w-50 mx-auto" data-bs-toggle="modal" data-bs-target="#csvUploadModal">Upload CSV</button>
@@ -93,7 +112,10 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content card-vm border-0">
             <div class="modal-header border-0">
-                <h6 class="modal-title fw-bold"><i class="bi bi-cloud-upload me-2"></i>Upload Master CSV</h6>
+                <h6 class="modal-title fw-bold">
+                    <svg class="bi-icon me-2" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.406 1.342A5.53 5.53 0 0 1 8 0c2.69 0 4.923 2 5.166 4.579C14.758 4.804 16 6.137 16 7.773 16 9.569 14.502 11 12.687 11H10a.5.5 0 0 1 0-1h2.688C13.979 10 15 8.988 15 7.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 2.825 10.328 1 8 1a4.53 4.53 0 0 0-2.941 1.1c-.757.652-1.153 1.438-1.153 2.055v.448l-.445.049C2.064 4.805 1 5.952 1 7.318 1 8.785 2.23 10 3.781 10H6a.5.5 0 0 1 0 1H3.781C1.708 11 0 9.366 0 7.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383"/><path fill-rule="evenodd" d="M7.646 4.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V14.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708z"/></svg>
+                    Upload Master CSV
+                </h6>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body text-center py-4">
@@ -107,8 +129,9 @@
     </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<!-- Local (self-hosted) JS — no internet needed -->
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/js/toastify.min.js}"></script>
 <script th:src="@{/js/app.js}"></script>
 </body>
 </html>
