@@ -158,3 +158,54 @@ body {
         align-items: center;
     }
 }
+/* Mobile Responsive Header Styles */
+@media (max-width: 991.98px) {
+    /* Main Layout Gap Reduce */
+    .vm-sidebar {
+        padding: 0.5rem 1rem !important; /* Top-Bottom Padding Kam Ki */
+    }
+
+    /* Brand Box Alignment & Height Reduction */
+    .vm-sidebar .brand-box {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 12px;
+        text-align: left !important;
+        margin-bottom: 0.5rem !important;
+        padding-top: 0.25rem !important;
+        padding-bottom: 0.25rem !important;
+    }
+
+    /* Logo Size Adjust */
+    .vm-sidebar .vm-logo {
+        margin: 0 !important;
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+        line-height: 32px;
+    }
+
+    /* Text & Subtitle Size Adjust */
+    .vm-sidebar .brand-box h5 {
+        font-size: 1rem;
+        margin-top: 0 !important;
+    }
+
+    .vm-sidebar .brand-box small {
+        font-size: 0.7rem;
+        display: block;
+        opacity: 0.8;
+    }
+
+    /* Navigation Links Horizontal/Inline Flex */
+    .vm-sidebar .sidebar-nav {
+        flex-direction: row !important;
+        gap: 0.5rem !important;
+    }
+
+    .vm-sidebar .nav-link {
+        padding: 0.35rem 0.75rem !important;
+        font-size: 0.85rem;
+    }
+}
