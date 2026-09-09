@@ -17,7 +17,9 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.time.LocalDateTime;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Service
@@ -81,9 +83,14 @@ public class LpnServiceImpl implements LpnService {
         String location = records.get(0).getLocation();
         LocalDateTime dbCreatedAt = records.get(0).getCreatedAt();
 
+        // 💡 ZONES SORTING LOGIC ADDED HERE (Ascending Order)
         String aggregatedMergedGroups = records.stream()
                 .map(MasterLpn::getPtlMergedGroup)
-                .distinct()
+                .filter(Objects::nonNull)                      // Null check
+                .map(String::trim)                             // Trimming spaces
+                .filter(s -> !s.isEmpty())                     // Empty check
+                .distinct()                                    // Unique values only
+                .sorted(Comparator.naturalOrder())             // Ascending Sort (Alphabetical/Numeric)
                 .collect(Collectors.joining(", "));
 
         ScanHistory history = ScanHistory.builder()
