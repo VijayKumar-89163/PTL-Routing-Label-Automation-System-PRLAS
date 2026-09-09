@@ -10,4 +10,10 @@ public class PrinterController {
     public String printerPage() {
         return "Printer";   // Printer.html open hoga
     }
+
+    @GetMapping("/test-sentry")
+    public String testSentry() {
+        // Intentional exception throw kar rahe hain test ke liye
+        throw new NullPointerException("Sentry Integration Test - Manual Trigger!");
+    }
 }
