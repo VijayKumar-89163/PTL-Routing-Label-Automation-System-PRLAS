@@ -76,6 +76,8 @@ public class LpnServiceImpl implements LpnService {
         List<MasterLpn> records = masterLpnRepository.findByLpnIgnoreCase(cleanedLpn);
 
         if (records.isEmpty()) {
+            // Option 1: Agar not found wale logs bhi chahiye toh yahan warning log daal sakte hain
+            log.warn("LPN [ {} ] NOT FOUND - Scan Time: {}", cleanedLpn, LocalDateTime.now());
             throw new LpnNotFoundException("LPN '" + cleanedLpn + "' NOT FOUND in Master Database.");
         }
 
@@ -83,14 +85,14 @@ public class LpnServiceImpl implements LpnService {
         String location = records.get(0).getLocation();
         LocalDateTime dbCreatedAt = records.get(0).getCreatedAt();
 
-        // 💡 ZONES SORTING LOGIC ADDED HERE (Ascending Order)
+        // ZONES SORTING LOGIC
         String aggregatedMergedGroups = records.stream()
                 .map(MasterLpn::getPtlMergedGroup)
-                .filter(Objects::nonNull)                      // Null check
-                .map(String::trim)                             // Trimming spaces
-                .filter(s -> !s.isEmpty())                     // Empty check
-                .distinct()                                    // Unique values only
-                .sorted(Comparator.naturalOrder())             // Ascending Sort (Alphabetical/Numeric)
+                .filter(Objects::nonNull)
+                .map(String::trim)
+                .filter(s -> !s.isEmpty())
+                .distinct()
+                .sorted(Comparator.naturalOrder())
                 .collect(Collectors.joining(", "));
 
         ScanHistory history = ScanHistory.builder()
@@ -99,7 +101,11 @@ public class LpnServiceImpl implements LpnService {
                 .ptlMergedGroups(aggregatedMergedGroups)
                 .location(location)
                 .build();
-        scanHistoryRepository.save(history);
+
+        ScanHistory savedHistory = scanHistoryRepository.save(history);
+
+        // 🌟 SUCCESS LOG FOR CONSOLE PRINTING
+        log.info("LPN FOUND: {} | Scanned At: {}", cleanedLpn, savedHistory.getScannedAt());
 
         return LpnResponseDTO.builder()
                 .lpn(cleanedLpn)
@@ -107,10 +113,9 @@ public class LpnServiceImpl implements LpnService {
                 .ptlMergedGroups(aggregatedMergedGroups)
                 .location(location)
                 .createdAt(dbCreatedAt)
-                .scannedAt(history.getScannedAt())
+                .scannedAt(savedHistory.getScannedAt())
                 .build();
     }
-
     @Override
     public List<ScanHistory> getRecentScans() {
         return scanHistoryRepository.findTop5ByOrderByScannedAtDesc();
