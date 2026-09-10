@@ -976,3 +976,168 @@ Caused by: java.sql.SQLSyntaxErrorException: Loading local data is disabled; thi
 2026-09-10 16:20:41 WARN  c.PRLAS.services.impl.LpnServiceImpl - LPN [ BP0013407270 ] NOT FOUND - Scan Time: 2026-09-10T16:20:41.100813900
 2026-09-10 16:20:41 WARN  c.P.exception.GlobalExceptionHandler - LPN Lookup Error: LPN 'BP0013407270' NOT FOUND in Master Database.
 2026-09-10 16:20:41 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.PRLAS.exception.LpnNotFoundException: LPN 'BP0013407270' NOT FOUND in Master Database.]
+2026-09-10 16:20:58 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP31565803 | Scanned At: 2026-09-10T16:20:58.735637900
+2026-09-10 16:24:45 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013630827 | Scanned At: 2026-09-10T16:24:45.928975400
+2026-09-10 16:25:56 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013707898 | Scanned At: 2026-09-10T16:25:56.434405300
+2026-09-10 16:26:48 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013799848 | Scanned At: 2026-09-10T16:26:48.787508
+2026-09-10 16:29:36 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013799855 | Scanned At: 2026-09-10T16:29:36.044156
+2026-09-10 16:29:45 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013799782 | Scanned At: 2026-09-10T16:29:45.523024700
+2026-09-10 16:29:52 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013799853 | Scanned At: 2026-09-10T16:29:52.008258500
+2026-09-10 16:29:58 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013799779 | Scanned At: 2026-09-10T16:29:58.919880
+2026-09-10 16:30:06 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013799852 | Scanned At: 2026-09-10T16:30:06.601337200
+2026-09-10 16:30:41 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013799851 | Scanned At: 2026-09-10T16:30:41.603589300
+2026-09-10 16:30:51 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013610970 | Scanned At: 2026-09-10T16:30:51.469579700
+2026-09-10 16:30:58 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013799838 | Scanned At: 2026-09-10T16:30:58.766872800
+2026-09-10 16:31:06 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013799843 | Scanned At: 2026-09-10T16:31:06.781538400
+2026-09-10 16:31:13 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013799850 | Scanned At: 2026-09-10T16:31:13.806214200
+2026-09-10 16:31:24 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013799849 | Scanned At: 2026-09-10T16:31:24.805168100
+2026-09-10 16:31:38 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013667180 | Scanned At: 2026-09-10T16:31:38.814179600
+2026-09-10 16:32:08 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013667183 | Scanned At: 2026-09-10T16:32:08.260558700
+2026-09-10 16:33:18 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP31859035 | Scanned At: 2026-09-10T16:33:18.566932800
+2026-09-10 16:34:12 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013509200 | Scanned At: 2026-09-10T16:34:12.301039700
+2026-09-10 16:34:36 WARN  c.PRLAS.services.impl.LpnServiceImpl - LPN [ BP0013407270 ] NOT FOUND - Scan Time: 2026-09-10T16:34:36.495305700
+2026-09-10 16:34:36 WARN  c.P.exception.GlobalExceptionHandler - LPN Lookup Error: LPN 'BP0013407270' NOT FOUND in Master Database.
+2026-09-10 16:34:36 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.PRLAS.exception.LpnNotFoundException: LPN 'BP0013407270' NOT FOUND in Master Database.]
+2026-09-10 16:35:21 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013653182 | Scanned At: 2026-09-10T16:35:21.154868800
+2026-09-10 16:35:34 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013653196 | Scanned At: 2026-09-10T16:35:34.981018500
+2026-09-10 16:36:25 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013698100 | Scanned At: 2026-09-10T16:36:25.451469400
+2026-09-10 16:36:39 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013667178 | Scanned At: 2026-09-10T16:36:39.054218200
+2026-09-10 16:36:49 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013667160 | Scanned At: 2026-09-10T16:36:49.456022200
+2026-09-10 16:37:03 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013656207 | Scanned At: 2026-09-10T16:37:03.125615
+2026-09-10 16:37:17 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013667186 | Scanned At: 2026-09-10T16:37:17.976416300
+2026-09-10 16:37:29 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013667158 | Scanned At: 2026-09-10T16:37:29.525514
+2026-09-10 16:37:39 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013667173 | Scanned At: 2026-09-10T16:37:39.980997500
+2026-09-10 16:37:50 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013656208 | Scanned At: 2026-09-10T16:37:50.638346800
+2026-09-10 16:40:41 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013667158 | Scanned At: 2026-09-10T16:40:41.860045600
+2026-09-10 16:43:06 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013604953 | Scanned At: 2026-09-10T16:43:06.631706
+2026-09-10 16:43:17 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013667159 | Scanned At: 2026-09-10T16:43:17.379089400
+2026-09-10 16:43:27 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013667155 | Scanned At: 2026-09-10T16:43:27.674725900
+2026-09-10 16:43:37 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013667164 | Scanned At: 2026-09-10T16:43:37.449052200
+2026-09-10 16:43:45 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013629781 | Scanned At: 2026-09-10T16:43:45.871660
+2026-09-10 16:43:56 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013667176 | Scanned At: 2026-09-10T16:43:56.432318300
+2026-09-10 16:44:04 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013667165 | Scanned At: 2026-09-10T16:44:04.996308600
+2026-09-10 16:44:13 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013667181 | Scanned At: 2026-09-10T16:44:13.170754500
+2026-09-10 16:44:28 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013667179 | Scanned At: 2026-09-10T16:44:28.141916900
+2026-09-10 16:44:39 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013604961 | Scanned At: 2026-09-10T16:44:39.417764800
+2026-09-10 16:45:40 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013667187 | Scanned At: 2026-09-10T16:45:40.977898300
+2026-09-10 16:48:36 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013560970 | Scanned At: 2026-09-10T16:48:36.992121600
+2026-09-10 16:49:36 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013792996 | Scanned At: 2026-09-10T16:49:36.893177600
+2026-09-10 16:50:07 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013709564 | Scanned At: 2026-09-10T16:50:07.512875900
+2026-09-10 16:51:04 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013408019 | Scanned At: 2026-09-10T16:51:04.686196200
+2026-09-10 16:52:09 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013630365 | Scanned At: 2026-09-10T16:52:09.786852400
+2026-09-10 16:58:36 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 17 class path changes (0 additions, 17 deletions, 0 modifications)
+2026-09-10 16:58:36 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-10 16:58:36 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-09-10 16:58:36 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-10 16:58:36 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-09-10 16:58:36 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-09-10 16:58:37 INFO  c.P.PtlRoutingLabelAutomationSystemPrlasApplication - Starting PtlRoutingLabelAutomationSystemPrlasApplication using Java 21.0.11 with PID 412 (C:\Users\Administrator\Documents\PTL-Routing-Label-Automation-System-PRLAS\target\classes started by Administrator in C:\Users\Administrator\Documents\PTL-Routing-Label-Automation-System-PRLAS)
+2026-09-10 16:58:37 DEBUG c.P.PtlRoutingLabelAutomationSystemPrlasApplication - Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-09-10 16:58:37 INFO  c.P.PtlRoutingLabelAutomationSystemPrlasApplication - No active profile set, falling back to 1 default profile: "default"
+2026-09-10 16:58:37 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-10 16:58:37 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 2 JPA repository interfaces.
+2026-09-10 16:58:37 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8083 (https)
+2026-09-10 16:58:37 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-09-10 16:58:37 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-10 16:58:37 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 334 ms
+2026-09-10 16:58:37 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-10 16:58:37 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-10 16:58:37 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-09-10 16:58:37 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2a506f29
+2026-09-10 16:58:37 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-09-10 16:58:37 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/PTL-Routing-Db?createDatabaseIfNotExist=true&allowLoadLocalInfile=true&allowMultiQueries=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: PTL-Routing-Db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-10 16:58:37 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-10 16:58:37 INFO  org.hibernate.orm.jdbc.batch - HHH100501: Automatic JDBC statement batching enabled (maximum batch size 1000)
+2026-09-10 16:58:37 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-10 16:58:37 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-10 16:58:37 INFO  o.a.t.u.net.NioEndpoint.certificate - Connector [https-jsse-nio-8083], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [Set directly - location unknown] using alias [springboot] with trust store [null]
+2026-09-10 16:58:37 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8083 (https) with context path '/'
+2026-09-10 16:58:37 INFO  c.P.PtlRoutingLabelAutomationSystemPrlasApplication - Started PtlRoutingLabelAutomationSystemPrlasApplication in 0.787 seconds (process running for 8828.097)
+2026-09-10 16:58:37 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-09-10 16:58:39 INFO  c.P.PtlRoutingLabelAutomationSystemPrlasApplicationTests - Starting PtlRoutingLabelAutomationSystemPrlasApplicationTests using Java 21.0.11 with PID 2396 (started by Administrator in C:\Users\Administrator\Documents\PTL-Routing-Label-Automation-System-PRLAS)
+2026-09-10 16:58:39 DEBUG c.P.PtlRoutingLabelAutomationSystemPrlasApplicationTests - Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-09-10 16:58:39 INFO  c.P.PtlRoutingLabelAutomationSystemPrlasApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-09-10 16:58:39 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 20 class path changes (17 additions, 0 deletions, 3 modifications)
+2026-09-10 16:58:39 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-10 16:58:39 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-09-10 16:58:39 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-10 16:58:39 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2026-09-10 16:58:39 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2026-09-10 16:58:39 INFO  c.P.PtlRoutingLabelAutomationSystemPrlasApplication - Starting PtlRoutingLabelAutomationSystemPrlasApplication using Java 21.0.11 with PID 412 (C:\Users\Administrator\Documents\PTL-Routing-Label-Automation-System-PRLAS\target\classes started by Administrator in C:\Users\Administrator\Documents\PTL-Routing-Label-Automation-System-PRLAS)
+2026-09-10 16:58:39 DEBUG c.P.PtlRoutingLabelAutomationSystemPrlasApplication - Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-09-10 16:58:39 INFO  c.P.PtlRoutingLabelAutomationSystemPrlasApplication - No active profile set, falling back to 1 default profile: "default"
+2026-09-10 16:58:39 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-10 16:58:39 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 2 JPA repository interfaces.
+2026-09-10 16:58:39 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8083 (https)
+2026-09-10 16:58:39 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-09-10 16:58:39 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-10 16:58:39 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 255 ms
+2026-09-10 16:58:39 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-10 16:58:39 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-10 16:58:39 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2026-09-10 16:58:39 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@da83d3c
+2026-09-10 16:58:39 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2026-09-10 16:58:39 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/PTL-Routing-Db?createDatabaseIfNotExist=true&allowLoadLocalInfile=true&allowMultiQueries=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: PTL-Routing-Db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-10 16:58:39 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-10 16:58:39 INFO  org.hibernate.orm.jdbc.batch - HHH100501: Automatic JDBC statement batching enabled (maximum batch size 1000)
+2026-09-10 16:58:39 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-10 16:58:39 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-10 16:58:39 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-10 16:58:39 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 34 ms. Found 2 JPA repository interfaces.
+2026-09-10 16:58:39 INFO  o.a.t.u.net.NioEndpoint.certificate - Connector [https-jsse-nio-8083], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [Set directly - location unknown] using alias [springboot] with trust store [null]
+2026-09-10 16:58:39 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8083 (https) with context path '/'
+2026-09-10 16:58:39 INFO  c.P.PtlRoutingLabelAutomationSystemPrlasApplication - Started PtlRoutingLabelAutomationSystemPrlasApplication in 0.568 seconds (process running for 8830.064)
+2026-09-10 16:58:39 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-09-10 16:58:40 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-10 16:58:40 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-09-10 16:58:40 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-10 16:58:40 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-09-10 16:58:40 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ba402b5
+2026-09-10 16:58:40 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-09-10 16:58:40 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/PTL-Routing-Db?createDatabaseIfNotExist=true&allowLoadLocalInfile=true&allowMultiQueries=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: PTL-Routing-Db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-10 16:58:41 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-10 16:58:41 INFO  org.hibernate.orm.jdbc.batch - HHH100501: Automatic JDBC statement batching enabled (maximum batch size 1000)
+2026-09-10 16:58:41 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-10 16:58:41 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-09-10 16:58:42 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-10 16:58:42 INFO  c.P.PtlRoutingLabelAutomationSystemPrlasApplicationTests - Started PtlRoutingLabelAutomationSystemPrlasApplicationTests in 3.644 seconds (process running for 4.415)
+2026-09-10 16:58:42 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-10 16:58:42 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-09-10 16:58:42 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-09-10 17:00:15 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-10 17:00:15 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-09-10 17:00:15 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-09-10 17:00:22 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013408019 | Scanned At: 2026-09-10T17:00:22.907164800
