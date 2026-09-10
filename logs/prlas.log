@@ -1,0 +1,978 @@
+2026-09-10T10:03:10.466+05:30  INFO 12496 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] ingLabelAutomationSystemPrlasApplication : Starting PtlRoutingLabelAutomationSystemPrlasApplication using Java 21.0.11 with PID 12496 (C:\Users\Administrator\Documents\PTL-Routing-Label-Automation-System-PRLAS\target\classes started by Administrator in C:\Users\Administrator\Documents\PTL-Routing-Label-Automation-System-PRLAS)
+2026-09-10T10:03:10.467+05:30  INFO 12496 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] ingLabelAutomationSystemPrlasApplication : No active profile set, falling back to 1 default profile: "default"
+2026-09-10T10:03:10.776+05:30  INFO 12496 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-10T10:03:10.829+05:30  INFO 12496 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 2 JPA repository interfaces.
+2026-09-10T10:03:11.190+05:30  INFO 12496 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8083 (https)
+2026-09-10T10:03:11.195+05:30  INFO 12496 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-10T10:03:11.197+05:30  INFO 12496 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-10T10:03:11.275+05:30  INFO 12496 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 801 ms
+2026-09-10T10:03:11.413+05:30  INFO 12496 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-10T10:03:11.533+05:30  INFO 12496 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-10T10:03:11.540+05:30  INFO 12496 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-09-10T10:03:11.583+05:30  INFO 12496 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7fc908f
+2026-09-10T10:03:11.585+05:30  INFO 12496 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-09-10T10:03:11.591+05:30  INFO 12496 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/PTL-Routing-Db?createDatabaseIfNotExist=true&allowLoadLocalInfile=true&allowMultiQueries=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: PTL-Routing-Db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-10T10:03:11.827+05:30  INFO 12496 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-10T10:03:11.830+05:30  INFO 12496 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] org.hibernate.orm.jdbc.batch             : HHH100501: Automatic JDBC statement batching enabled (maximum batch size 1000)
+2026-09-10T10:03:11.900+05:30  INFO 12496 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-10T10:03:12.194+05:30  WARN 12496 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-10T10:03:12.882+05:30  INFO 12496 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] o.a.t.util.net.NioEndpoint.certificate   : Connector [https-jsse-nio-8083], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [Set directly - location unknown] using alias [springboot] with trust store [null]
+2026-09-10T10:03:12.890+05:30  INFO 12496 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8083 (https) with context path '/'
+2026-09-10T10:03:12.902+05:30  INFO 12496 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] ingLabelAutomationSystemPrlasApplication : Started PtlRoutingLabelAutomationSystemPrlasApplication in 2.548 seconds (process running for 546.861)
+2026-09-10T10:03:12.907+05:30  INFO 12496 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-10T10:17:01.309+05:30  WARN 12496 --- [PTL-Routing-Label-Automation-System-PRLAS] [HikariPool-2:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=5m49s499ms941µs100ns).
+2026-09-10T10:31:27.506+05:30  INFO 12496 --- [PTL-Routing-Label-Automation-System-PRLAS] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-10T10:31:27.513+05:30  INFO 12496 --- [PTL-Routing-Label-Automation-System-PRLAS] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-10T10:31:27.517+05:30  INFO 12496 --- [PTL-Routing-Label-Automation-System-PRLAS] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-10T10:31:27.518+05:30  INFO 12496 --- [PTL-Routing-Label-Automation-System-PRLAS] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-09-10T10:31:27.522+05:30  INFO 12496 --- [PTL-Routing-Label-Automation-System-PRLAS] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-09-10T10:31:31.197+05:30  INFO 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] ingLabelAutomationSystemPrlasApplication : Starting PtlRoutingLabelAutomationSystemPrlasApplication using Java 21.0.11 with PID 16548 (C:\Users\Administrator\Documents\PTL-Routing-Label-Automation-System-PRLAS\target\classes started by Administrator in C:\Users\Administrator\Documents\PTL-Routing-Label-Automation-System-PRLAS)
+2026-09-10T10:31:31.201+05:30  INFO 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] ingLabelAutomationSystemPrlasApplication : No active profile set, falling back to 1 default profile: "default"
+2026-09-10T10:31:31.274+05:30  INFO 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-09-10T10:31:31.274+05:30  INFO 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-09-10T10:31:32.243+05:30  INFO 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-10T10:31:32.314+05:30  INFO 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 2 JPA repository interfaces.
+2026-09-10T10:31:33.223+05:30  INFO 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8083 (https)
+2026-09-10T10:31:33.248+05:30  INFO 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-10T10:31:33.248+05:30  INFO 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-10T10:31:33.292+05:30  INFO 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2017 ms
+2026-09-10T10:31:33.508+05:30  INFO 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-10T10:31:33.581+05:30  INFO 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-09-10T10:31:34.088+05:30  INFO 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-10T10:31:34.122+05:30  INFO 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-10T10:31:34.476+05:30  INFO 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@fe7f45d
+2026-09-10T10:31:34.478+05:30  INFO 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-10T10:31:34.574+05:30  INFO 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/PTL-Routing-Db?createDatabaseIfNotExist=true&allowLoadLocalInfile=true&allowMultiQueries=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: PTL-Routing-Db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-10T10:31:35.677+05:30  INFO 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-10T10:31:35.686+05:30  INFO 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] org.hibernate.orm.jdbc.batch             : HHH100501: Automatic JDBC statement batching enabled (maximum batch size 1000)
+2026-09-10T10:31:35.765+05:30  INFO 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-10T10:31:35.856+05:30  INFO 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-09-10T10:31:36.205+05:30  WARN 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-10T10:31:36.784+05:30  INFO 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] o.a.t.util.net.NioEndpoint.certificate   : Connector [https-jsse-nio-8083], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [Set directly - location unknown] using alias [springboot] with trust store [null]
+2026-09-10T10:31:36.801+05:30  INFO 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8083 (https) with context path '/'
+2026-09-10T10:31:36.807+05:30  INFO 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [restartedMain] ingLabelAutomationSystemPrlasApplication : Started PtlRoutingLabelAutomationSystemPrlasApplication in 6.301 seconds (process running for 7.66)
+2026-09-10T10:45:32.625+05:30  INFO 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [https-jsse-nio-8083-exec-7] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-10T10:45:32.626+05:30  INFO 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [https-jsse-nio-8083-exec-7] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-10T10:45:32.628+05:30  INFO 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [https-jsse-nio-8083-exec-7] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-09-10T10:45:41.506+05:30  INFO 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [https-jsse-nio-8083-exec-5] com.PRLAS.services.impl.LpnServiceImpl   : LPN FOUND: Bp0012855941 | Scanned At: 2026-09-10T10:45:41.475707300
+2026-09-10T10:46:13.419+05:30  INFO 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-09-10T10:46:13.427+05:30  INFO 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-10T10:46:13.437+05:30  INFO 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-10T10:46:13.443+05:30  INFO 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-10T10:46:13.450+05:30  INFO 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-10T10:46:13.459+05:30  INFO 16548 --- [PTL-Routing-Label-Automation-System-PRLAS] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-10 10:46:13 INFO  c.P.PtlRoutingLabelAutomationSystemPrlasApplication - Starting PtlRoutingLabelAutomationSystemPrlasApplication using Java 21.0.11 with PID 16548 (C:\Users\Administrator\Documents\PTL-Routing-Label-Automation-System-PRLAS\target\classes started by Administrator in C:\Users\Administrator\Documents\PTL-Routing-Label-Automation-System-PRLAS)
+2026-09-10 10:46:13 DEBUG c.P.PtlRoutingLabelAutomationSystemPrlasApplication - Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-09-10 10:46:13 INFO  c.P.PtlRoutingLabelAutomationSystemPrlasApplication - No active profile set, falling back to 1 default profile: "default"
+2026-09-10 10:46:14 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-10 10:46:14 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 2 JPA repository interfaces.
+2026-09-10 10:46:14 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8083 (https)
+2026-09-10 10:46:14 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-09-10 10:46:14 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-10 10:46:14 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 805 ms
+2026-09-10 10:46:14 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-10 10:46:14 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-10 10:46:14 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-09-10 10:46:14 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6d65229b
+2026-09-10 10:46:14 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-09-10 10:46:14 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/PTL-Routing-Db?createDatabaseIfNotExist=true&allowLoadLocalInfile=true&allowMultiQueries=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: PTL-Routing-Db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-10 10:46:15 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-10 10:46:15 INFO  org.hibernate.orm.jdbc.batch - HHH100501: Automatic JDBC statement batching enabled (maximum batch size 1000)
+2026-09-10 10:46:15 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-10 10:46:15 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-10 10:46:16 INFO  o.a.t.u.net.NioEndpoint.certificate - Connector [https-jsse-nio-8083], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [Set directly - location unknown] using alias [springboot] with trust store [null]
+2026-09-10 10:46:16 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8083 (https) with context path '/'
+2026-09-10 10:46:16 INFO  c.P.PtlRoutingLabelAutomationSystemPrlasApplication - Started PtlRoutingLabelAutomationSystemPrlasApplication in 2.629 seconds (process running for 887.027)
+2026-09-10 10:46:16 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-09-10 10:48:12 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-10 10:48:12 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-09-10 10:48:12 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-10 10:48:12 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2026-09-10 10:48:12 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2026-09-10 10:48:16 INFO  c.P.PtlRoutingLabelAutomationSystemPrlasApplication - Starting PtlRoutingLabelAutomationSystemPrlasApplication using Java 21.0.11 with PID 18224 (C:\Users\Administrator\Documents\PTL-Routing-Label-Automation-System-PRLAS\target\classes started by Administrator in C:\Users\Administrator\Documents\PTL-Routing-Label-Automation-System-PRLAS)
+2026-09-10 10:48:16 DEBUG c.P.PtlRoutingLabelAutomationSystemPrlasApplication - Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-09-10 10:48:16 INFO  c.P.PtlRoutingLabelAutomationSystemPrlasApplication - No active profile set, falling back to 1 default profile: "default"
+2026-09-10 10:48:16 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-09-10 10:48:16 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-09-10 10:48:17 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-10 10:48:17 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 57 ms. Found 2 JPA repository interfaces.
+2026-09-10 10:48:18 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8083 (https)
+2026-09-10 10:48:18 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-09-10 10:48:18 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-10 10:48:18 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1708 ms
+2026-09-10 10:48:18 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-10 10:48:18 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-09-10 10:48:19 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-10 10:48:19 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-09-10 10:48:19 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@66e0d64d
+2026-09-10 10:48:19 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-09-10 10:48:19 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/PTL-Routing-Db?createDatabaseIfNotExist=true&allowLoadLocalInfile=true&allowMultiQueries=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: PTL-Routing-Db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-10 10:48:20 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-10 10:48:20 INFO  org.hibernate.orm.jdbc.batch - HHH100501: Automatic JDBC statement batching enabled (maximum batch size 1000)
+2026-09-10 10:48:20 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-10 10:48:21 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-09-10 10:48:21 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-10 10:48:22 INFO  o.a.t.u.net.NioEndpoint.certificate - Connector [https-jsse-nio-8083], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [Set directly - location unknown] using alias [springboot] with trust store [null]
+2026-09-10 10:48:22 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8083 (https) with context path '/'
+2026-09-10 10:48:22 INFO  c.P.PtlRoutingLabelAutomationSystemPrlasApplication - Started PtlRoutingLabelAutomationSystemPrlasApplication in 5.991 seconds (process running for 7.254)
+2026-09-10 10:48:24 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-10 10:48:24 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-09-10 10:48:24 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-09-10 10:48:39 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: Bp0012855941 | Scanned At: 2026-09-10T10:48:39.370216300
+2026-09-10 10:48:52 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0012973197 | Scanned At: 2026-09-10T10:48:52.001863800
+2026-09-10 10:48:53 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: Bp0012855941 | Scanned At: 2026-09-10T10:48:53.378633700
+2026-09-10 10:48:54 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0012973197 | Scanned At: 2026-09-10T10:48:54.690104400
+2026-09-10 10:48:55 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0012973197 | Scanned At: 2026-09-10T10:48:55.573442400
+2026-09-10 10:48:56 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0012973197 | Scanned At: 2026-09-10T10:48:56.805526
+2026-09-10 10:48:58 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0012973197 | Scanned At: 2026-09-10T10:48:58.402810500
+2026-09-10 10:49:15 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0012973197 | Scanned At: 2026-09-10T10:49:15.768264200
+2026-09-10 10:49:16 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: Bp0012855941 | Scanned At: 2026-09-10T10:49:16.251936400
+2026-09-10 10:49:17 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: Bp0012855941 | Scanned At: 2026-09-10T10:49:17.033380100
+2026-09-10 10:49:17 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0012973197 | Scanned At: 2026-09-10T10:49:17.815383800
+2026-09-10 10:49:18 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0012973197 | Scanned At: 2026-09-10T10:49:18.613580700
+2026-09-10 10:49:19 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: Bp0012855941 | Scanned At: 2026-09-10T10:49:19.251386200
+2026-09-10 10:49:19 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0012973197 | Scanned At: 2026-09-10T10:49:19.827281400
+2026-09-10 10:49:20 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0012973197 | Scanned At: 2026-09-10T10:49:20.540384800
+2026-09-10 10:49:21 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0012973197 | Scanned At: 2026-09-10T10:49:21.082485900
+2026-09-10 10:49:21 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0012973197 | Scanned At: 2026-09-10T10:49:21.634377400
+2026-09-10 10:49:22 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0012973197 | Scanned At: 2026-09-10T10:49:22.165308700
+2026-09-10 10:49:23 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0012973197 | Scanned At: 2026-09-10T10:49:23.137705600
+2026-09-10 10:49:23 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0012973197 | Scanned At: 2026-09-10T10:49:23.630612800
+2026-09-10 10:49:24 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0012973197 | Scanned At: 2026-09-10T10:49:24.981516600
+2026-09-10 10:49:25 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0012973197 | Scanned At: 2026-09-10T10:49:25.586754400
+2026-09-10 10:49:44 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0012973197 | Scanned At: 2026-09-10T10:49:44.438802300
+2026-09-10 10:49:45 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: Bp0012855941 | Scanned At: 2026-09-10T10:49:45.539167800
+2026-09-10 10:49:46 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: Bp0012855941 | Scanned At: 2026-09-10T10:49:46.227007200
+2026-09-10 10:49:46 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: Bp0012855941 | Scanned At: 2026-09-10T10:49:46.879149600
+2026-09-10 10:49:47 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0012973197 | Scanned At: 2026-09-10T10:49:47.897650200
+2026-09-10 10:49:48 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0012973197 | Scanned At: 2026-09-10T10:49:48.943184
+2026-09-10 10:49:49 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: Bp0012855941 | Scanned At: 2026-09-10T10:49:49.842639100
+2026-09-10 10:49:50 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0012973197 | Scanned At: 2026-09-10T10:49:50.570142400
+2026-09-10 10:58:57 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: Bp0012855941 | Scanned At: 2026-09-10T10:58:57.238538800
+2026-09-10 10:58:57 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: Bp0012855941 | Scanned At: 2026-09-10T10:58:57.904029400
+2026-09-10 10:58:59 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: Bp0012855941 | Scanned At: 2026-09-10T10:58:59.315801300
+2026-09-10 10:58:59 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0012973197 | Scanned At: 2026-09-10T10:58:59.966853600
+2026-09-10 10:59:01 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0012973197 | Scanned At: 2026-09-10T10:59:01.305964700
+2026-09-10 11:23:11 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m21s290ms811µs100ns).
+2026-09-10 11:33:07 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m56s380ms930µs700ns).
+2026-09-10 11:47:25 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: Bp0012855941 | Scanned At: 2026-09-10T11:47:25.608600100
+2026-09-10 11:47:28 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0012973197 | Scanned At: 2026-09-10T11:47:28.314144500
+2026-09-10 12:01:43 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m34s916ms447µs299ns).
+2026-09-10 12:14:08 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m55s167ms612µs300ns).
+2026-09-10 12:17:59 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: Bp0012855941 | Scanned At: 2026-09-10T12:17:59.298548800
+2026-09-10 12:18:05 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: Bp0012855941 | Scanned At: 2026-09-10T12:18:05.334047800
+2026-09-10 12:18:13 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: Bp0012855941 | Scanned At: 2026-09-10T12:18:13.745082200
+2026-09-10 12:18:14 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0012973197 | Scanned At: 2026-09-10T12:18:14.921016200
+2026-09-10 12:18:15 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: Bp0012855941 | Scanned At: 2026-09-10T12:18:15.850536200
+2026-09-10 12:18:16 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: Bp0012855941 | Scanned At: 2026-09-10T12:18:16.962959600
+2026-09-10 12:18:17 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: Bp0012855941 | Scanned At: 2026-09-10T12:18:17.988517900
+2026-09-10 12:18:18 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0012973197 | Scanned At: 2026-09-10T12:18:18.652221600
+2026-09-10 12:18:19 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: Bp0012855941 | Scanned At: 2026-09-10T12:18:19.423144500
+2026-09-10 12:18:19 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0012973197 | Scanned At: 2026-09-10T12:18:19.859948900
+2026-09-10 12:18:20 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: Bp0012855941 | Scanned At: 2026-09-10T12:18:20.306537
+2026-09-10 12:19:26 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: Bp0012855941 | Scanned At: 2026-09-10T12:19:26.493306900
+2026-09-10 12:19:28 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: Bp0012855941 | Scanned At: 2026-09-10T12:19:28.441224300
+2026-09-10 12:30:05 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m56s629ms270µs500ns).
+2026-09-10 13:16:28 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m52s758ms619µs400ns).
+2026-09-10 13:48:09 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=31m11s51ms343µs).
+2026-09-10 13:48:53 WARN  c.PRLAS.services.impl.LpnServiceImpl - LPN [ BP0013005213 ] NOT FOUND - Scan Time: 2026-09-10T13:48:53.953527800
+2026-09-10 13:48:53 WARN  c.P.exception.GlobalExceptionHandler - LPN Lookup Error: LPN 'BP0013005213' NOT FOUND in Master Database.
+2026-09-10 13:48:54 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.PRLAS.exception.LpnNotFoundException: LPN 'BP0013005213' NOT FOUND in Master Database.]
+2026-09-10 13:49:01 WARN  c.PRLAS.services.impl.LpnServiceImpl - LPN [ BP31870061 ] NOT FOUND - Scan Time: 2026-09-10T13:49:01.298525100
+2026-09-10 13:49:01 WARN  c.P.exception.GlobalExceptionHandler - LPN Lookup Error: LPN 'BP31870061' NOT FOUND in Master Database.
+2026-09-10 13:49:01 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.PRLAS.exception.LpnNotFoundException: LPN 'BP31870061' NOT FOUND in Master Database.]
+2026-09-10 13:49:11 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013277625 | Scanned At: 2026-09-10T13:49:11.563147700
+2026-09-10 13:49:54 WARN  c.PRLAS.services.impl.LpnServiceImpl - LPN [ BP0013690361 ] NOT FOUND - Scan Time: 2026-09-10T13:49:54.037655300
+2026-09-10 13:49:54 WARN  c.P.exception.GlobalExceptionHandler - LPN Lookup Error: LPN 'BP0013690361' NOT FOUND in Master Database.
+2026-09-10 13:49:54 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.PRLAS.exception.LpnNotFoundException: LPN 'BP0013690361' NOT FOUND in Master Database.]
+2026-09-10 14:23:43 DEBUG c.P.exception.GlobalExceptionHandler - Static resource not found: favicon.ico
+2026-09-10 14:23:43 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico for request '/favicon.ico'.]
+2026-09-10 14:26:19 DEBUG c.P.exception.GlobalExceptionHandler - Static resource not found: favicon.ico
+2026-09-10 14:26:19 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico for request '/favicon.ico'.]
+2026-09-10 14:27:04 WARN  org.hibernate.orm.jdbc.error - HHH000247: ErrorCode: 3948, SQLState: 42000
+2026-09-10 14:27:04 WARN  org.hibernate.orm.jdbc.error - Loading local data is disabled; this must be enabled on both the client and server sides
+2026-09-10 14:27:04 ERROR c.PRLAS.services.impl.LpnServiceImpl - Fast CSV Upload Failed: 
+org.springframework.dao.InvalidDataAccessResourceUsageException: JDBC exception executing SQL [Loading local data is disabled; this must be enabled on both the client and server sides] [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]; SQL [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:156)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:131)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.translateExceptionIfPossible(HibernateExceptionTranslator.java:105)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:223)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:577)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:346)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:157)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222)
+	at jdk.proxy4/jdk.proxy4.$Proxy133.loadCsvDataDirectly(Unknown Source)
+	at com.PRLAS.services.impl.LpnServiceImpl.processAndSaveCsv(LpnServiceImpl.java:50)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at com.PRLAS.services.impl.LpnServiceImpl$$SpringCGLIB$$0.processAndSaveCsv(<generated>)
+	at com.PRLAS.controller.LpnRestController.uploadCsv(LpnRestController.java:39)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:535)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:406)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1307)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2036)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:949)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.hibernate.exception.SQLGrammarException: JDBC exception executing SQL [Loading local data is disabled; this must be enabled on both the client and server sides] [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:64)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.handleException(StandardJdbcMutationExecutor.java:95)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:84)
+	at org.hibernate.query.sql.internal.NativeNonSelectQueryPlanImpl.executeUpdate(NativeNonSelectQueryPlanImpl.java:64)
+	at org.hibernate.query.sql.internal.NativeQueryImpl.doExecuteUpdate(NativeQueryImpl.java:1116)
+	at org.hibernate.query.spi.AbstractQuery.executeUpdate(AbstractQuery.java:642)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$ModifyingExecution.doExecute(JpaQueryExecution.java:382)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:100)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:166)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:156)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:169)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:167)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:146)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:135)
+	... 61 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Loading local data is disabled; this must be enabled on both the client and server sides
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:70)
+	... 80 common frames omitted
+2026-09-10 14:27:04 ERROR c.P.exception.GlobalExceptionHandler - CSV Import Error: Failed to execute LOAD DATA INFILE: JDBC exception executing SQL [Loading local data is disabled; this must be enabled on both the client and server sides] [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]; SQL [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]
+2026-09-10 14:27:04 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.PRLAS.exception.InvalidCsvException: Failed to execute LOAD DATA INFILE: JDBC exception executing SQL [Loading local data is disabled; this must be enabled on both the client and server sides] [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]; SQL [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]]
+2026-09-10 14:27:09 WARN  org.hibernate.orm.jdbc.error - HHH000247: ErrorCode: 3948, SQLState: 42000
+2026-09-10 14:27:09 WARN  org.hibernate.orm.jdbc.error - Loading local data is disabled; this must be enabled on both the client and server sides
+2026-09-10 14:27:09 ERROR c.PRLAS.services.impl.LpnServiceImpl - Fast CSV Upload Failed: 
+org.springframework.dao.InvalidDataAccessResourceUsageException: JDBC exception executing SQL [Loading local data is disabled; this must be enabled on both the client and server sides] [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]; SQL [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:156)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:131)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.translateExceptionIfPossible(HibernateExceptionTranslator.java:105)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:223)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:577)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:346)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:157)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222)
+	at jdk.proxy4/jdk.proxy4.$Proxy133.loadCsvDataDirectly(Unknown Source)
+	at com.PRLAS.services.impl.LpnServiceImpl.processAndSaveCsv(LpnServiceImpl.java:50)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at com.PRLAS.services.impl.LpnServiceImpl$$SpringCGLIB$$0.processAndSaveCsv(<generated>)
+	at com.PRLAS.controller.LpnRestController.uploadCsv(LpnRestController.java:39)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:535)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:406)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1307)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2036)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:949)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.hibernate.exception.SQLGrammarException: JDBC exception executing SQL [Loading local data is disabled; this must be enabled on both the client and server sides] [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:64)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.handleException(StandardJdbcMutationExecutor.java:95)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:84)
+	at org.hibernate.query.sql.internal.NativeNonSelectQueryPlanImpl.executeUpdate(NativeNonSelectQueryPlanImpl.java:64)
+	at org.hibernate.query.sql.internal.NativeQueryImpl.doExecuteUpdate(NativeQueryImpl.java:1116)
+	at org.hibernate.query.spi.AbstractQuery.executeUpdate(AbstractQuery.java:642)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$ModifyingExecution.doExecute(JpaQueryExecution.java:382)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:100)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:166)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:156)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:169)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:167)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:146)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:135)
+	... 61 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Loading local data is disabled; this must be enabled on both the client and server sides
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:70)
+	... 80 common frames omitted
+2026-09-10 14:27:09 ERROR c.P.exception.GlobalExceptionHandler - CSV Import Error: Failed to execute LOAD DATA INFILE: JDBC exception executing SQL [Loading local data is disabled; this must be enabled on both the client and server sides] [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]; SQL [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]
+2026-09-10 14:27:09 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.PRLAS.exception.InvalidCsvException: Failed to execute LOAD DATA INFILE: JDBC exception executing SQL [Loading local data is disabled; this must be enabled on both the client and server sides] [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]; SQL [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]]
+2026-09-10 14:27:12 WARN  org.hibernate.orm.jdbc.error - HHH000247: ErrorCode: 3948, SQLState: 42000
+2026-09-10 14:27:12 WARN  org.hibernate.orm.jdbc.error - Loading local data is disabled; this must be enabled on both the client and server sides
+2026-09-10 14:27:12 ERROR c.PRLAS.services.impl.LpnServiceImpl - Fast CSV Upload Failed: 
+org.springframework.dao.InvalidDataAccessResourceUsageException: JDBC exception executing SQL [Loading local data is disabled; this must be enabled on both the client and server sides] [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]; SQL [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:156)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:131)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.translateExceptionIfPossible(HibernateExceptionTranslator.java:105)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:223)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:577)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:346)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:157)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222)
+	at jdk.proxy4/jdk.proxy4.$Proxy133.loadCsvDataDirectly(Unknown Source)
+	at com.PRLAS.services.impl.LpnServiceImpl.processAndSaveCsv(LpnServiceImpl.java:50)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at com.PRLAS.services.impl.LpnServiceImpl$$SpringCGLIB$$0.processAndSaveCsv(<generated>)
+	at com.PRLAS.controller.LpnRestController.uploadCsv(LpnRestController.java:39)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:535)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:406)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1307)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2036)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:949)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.hibernate.exception.SQLGrammarException: JDBC exception executing SQL [Loading local data is disabled; this must be enabled on both the client and server sides] [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:64)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.handleException(StandardJdbcMutationExecutor.java:95)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:84)
+	at org.hibernate.query.sql.internal.NativeNonSelectQueryPlanImpl.executeUpdate(NativeNonSelectQueryPlanImpl.java:64)
+	at org.hibernate.query.sql.internal.NativeQueryImpl.doExecuteUpdate(NativeQueryImpl.java:1116)
+	at org.hibernate.query.spi.AbstractQuery.executeUpdate(AbstractQuery.java:642)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$ModifyingExecution.doExecute(JpaQueryExecution.java:382)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:100)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:166)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:156)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:169)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:167)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:146)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:135)
+	... 61 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Loading local data is disabled; this must be enabled on both the client and server sides
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:70)
+	... 80 common frames omitted
+2026-09-10 14:27:12 ERROR c.P.exception.GlobalExceptionHandler - CSV Import Error: Failed to execute LOAD DATA INFILE: JDBC exception executing SQL [Loading local data is disabled; this must be enabled on both the client and server sides] [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]; SQL [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]
+2026-09-10 14:27:12 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.PRLAS.exception.InvalidCsvException: Failed to execute LOAD DATA INFILE: JDBC exception executing SQL [Loading local data is disabled; this must be enabled on both the client and server sides] [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]; SQL [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]]
+2026-09-10 14:31:04 WARN  org.hibernate.orm.jdbc.error - HHH000247: ErrorCode: 3948, SQLState: 42000
+2026-09-10 14:31:04 WARN  org.hibernate.orm.jdbc.error - Loading local data is disabled; this must be enabled on both the client and server sides
+2026-09-10 14:31:04 ERROR c.PRLAS.services.impl.LpnServiceImpl - Fast CSV Upload Failed: 
+org.springframework.dao.InvalidDataAccessResourceUsageException: JDBC exception executing SQL [Loading local data is disabled; this must be enabled on both the client and server sides] [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]; SQL [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:156)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:131)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.translateExceptionIfPossible(HibernateExceptionTranslator.java:105)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:223)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:577)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:346)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:157)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222)
+	at jdk.proxy4/jdk.proxy4.$Proxy133.loadCsvDataDirectly(Unknown Source)
+	at com.PRLAS.services.impl.LpnServiceImpl.processAndSaveCsv(LpnServiceImpl.java:50)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at com.PRLAS.services.impl.LpnServiceImpl$$SpringCGLIB$$0.processAndSaveCsv(<generated>)
+	at com.PRLAS.controller.LpnRestController.uploadCsv(LpnRestController.java:39)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:535)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:406)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1307)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2036)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:949)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.hibernate.exception.SQLGrammarException: JDBC exception executing SQL [Loading local data is disabled; this must be enabled on both the client and server sides] [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:64)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.handleException(StandardJdbcMutationExecutor.java:95)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:84)
+	at org.hibernate.query.sql.internal.NativeNonSelectQueryPlanImpl.executeUpdate(NativeNonSelectQueryPlanImpl.java:64)
+	at org.hibernate.query.sql.internal.NativeQueryImpl.doExecuteUpdate(NativeQueryImpl.java:1116)
+	at org.hibernate.query.spi.AbstractQuery.executeUpdate(AbstractQuery.java:642)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$ModifyingExecution.doExecute(JpaQueryExecution.java:382)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:100)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:166)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:156)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:169)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:167)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:146)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:135)
+	... 61 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Loading local data is disabled; this must be enabled on both the client and server sides
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:70)
+	... 80 common frames omitted
+2026-09-10 14:31:04 ERROR c.P.exception.GlobalExceptionHandler - CSV Import Error: Failed to execute LOAD DATA INFILE: JDBC exception executing SQL [Loading local data is disabled; this must be enabled on both the client and server sides] [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]; SQL [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]
+2026-09-10 14:31:04 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.PRLAS.exception.InvalidCsvException: Failed to execute LOAD DATA INFILE: JDBC exception executing SQL [Loading local data is disabled; this must be enabled on both the client and server sides] [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]; SQL [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]]
+2026-09-10 14:31:28 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-10 14:31:28 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-09-10 14:31:28 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-10 14:31:28 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-09-10 14:31:28 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-09-10 14:31:31 INFO  c.P.PtlRoutingLabelAutomationSystemPrlasApplication - Starting PtlRoutingLabelAutomationSystemPrlasApplication using Java 21.0.11 with PID 412 (C:\Users\Administrator\Documents\PTL-Routing-Label-Automation-System-PRLAS\target\classes started by Administrator in C:\Users\Administrator\Documents\PTL-Routing-Label-Automation-System-PRLAS)
+2026-09-10 14:31:31 DEBUG c.P.PtlRoutingLabelAutomationSystemPrlasApplication - Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-09-10 14:31:31 INFO  c.P.PtlRoutingLabelAutomationSystemPrlasApplication - No active profile set, falling back to 1 default profile: "default"
+2026-09-10 14:31:31 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-09-10 14:31:31 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-09-10 14:31:32 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-10 14:31:32 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 50 ms. Found 2 JPA repository interfaces.
+2026-09-10 14:31:33 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8083 (https)
+2026-09-10 14:31:33 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-09-10 14:31:33 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-10 14:31:33 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1680 ms
+2026-09-10 14:31:33 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-10 14:31:33 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-09-10 14:31:34 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-10 14:31:34 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-09-10 14:31:34 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@686332d6
+2026-09-10 14:31:34 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-09-10 14:31:34 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/PTL-Routing-Db?createDatabaseIfNotExist=true&allowLoadLocalInfile=true&allowMultiQueries=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: PTL-Routing-Db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-10 14:31:35 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-10 14:31:35 INFO  org.hibernate.orm.jdbc.batch - HHH100501: Automatic JDBC statement batching enabled (maximum batch size 1000)
+2026-09-10 14:31:35 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-10 14:31:35 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-09-10 14:31:36 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-10 14:31:36 INFO  o.a.t.u.net.NioEndpoint.certificate - Connector [https-jsse-nio-8083], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [Set directly - location unknown] using alias [springboot] with trust store [null]
+2026-09-10 14:31:36 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8083 (https) with context path '/'
+2026-09-10 14:31:36 INFO  c.P.PtlRoutingLabelAutomationSystemPrlasApplication - Started PtlRoutingLabelAutomationSystemPrlasApplication in 5.914 seconds (process running for 7.184)
+2026-09-10 14:31:41 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-10 14:31:41 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-09-10 14:31:41 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-09-10 14:31:43 WARN  org.hibernate.orm.jdbc.error - HHH000247: ErrorCode: 3948, SQLState: 42000
+2026-09-10 14:31:43 WARN  org.hibernate.orm.jdbc.error - Loading local data is disabled; this must be enabled on both the client and server sides
+2026-09-10 14:31:43 ERROR c.PRLAS.services.impl.LpnServiceImpl - Fast CSV Upload Failed: 
+org.springframework.dao.InvalidDataAccessResourceUsageException: JDBC exception executing SQL [Loading local data is disabled; this must be enabled on both the client and server sides] [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]; SQL [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:156)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.convertHibernateAccessException(HibernateExceptionTranslator.java:131)
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.translateExceptionIfPossible(HibernateExceptionTranslator.java:105)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:223)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:577)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:346)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:157)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222)
+	at jdk.proxy4/jdk.proxy4.$Proxy133.loadCsvDataDirectly(Unknown Source)
+	at com.PRLAS.services.impl.LpnServiceImpl.processAndSaveCsv(LpnServiceImpl.java:50)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at com.PRLAS.services.impl.LpnServiceImpl$$SpringCGLIB$$0.processAndSaveCsv(<generated>)
+	at com.PRLAS.controller.LpnRestController.uploadCsv(LpnRestController.java:39)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:535)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:406)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1307)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2036)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:949)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.hibernate.exception.SQLGrammarException: JDBC exception executing SQL [Loading local data is disabled; this must be enabled on both the client and server sides] [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:64)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.handleException(StandardJdbcMutationExecutor.java:95)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:84)
+	at org.hibernate.query.sql.internal.NativeNonSelectQueryPlanImpl.executeUpdate(NativeNonSelectQueryPlanImpl.java:64)
+	at org.hibernate.query.sql.internal.NativeQueryImpl.doExecuteUpdate(NativeQueryImpl.java:1116)
+	at org.hibernate.query.spi.AbstractQuery.executeUpdate(AbstractQuery.java:642)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$ModifyingExecution.doExecute(JpaQueryExecution.java:382)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:100)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:166)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:156)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:169)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:167)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:146)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:135)
+	... 61 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Loading local data is disabled; this must be enabled on both the client and server sides
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:70)
+	... 80 common frames omitted
+2026-09-10 14:31:43 ERROR c.P.exception.GlobalExceptionHandler - CSV Import Error: Failed to execute LOAD DATA INFILE: JDBC exception executing SQL [Loading local data is disabled; this must be enabled on both the client and server sides] [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]; SQL [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]
+2026-09-10 14:31:43 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.PRLAS.exception.InvalidCsvException: Failed to execute LOAD DATA INFILE: JDBC exception executing SQL [Loading local data is disabled; this must be enabled on both the client and server sides] [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]; SQL [LOAD DATA LOCAL INFILE ? IGNORE INTO TABLE master_lpn_data FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (lpn, ptl_group, ptl_merged_group, location) SET created_at = NOW()]]
+2026-09-10 14:33:16 INFO  c.PRLAS.services.impl.LpnServiceImpl - Direct MySQL INFILE Import Completed. Rows affected: 8931
+2026-09-10 14:33:56 INFO  c.PRLAS.services.impl.LpnServiceImpl - Direct MySQL INFILE Import Completed. Rows affected: 8931
+2026-09-10 14:34:36 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013709792 | Scanned At: 2026-09-10T14:34:36.091859700
+2026-09-10 14:35:02 WARN  c.PRLAS.services.impl.LpnServiceImpl - LPN [ BP0013431934 ] NOT FOUND - Scan Time: 2026-09-10T14:35:02.949626
+2026-09-10 14:35:02 WARN  c.P.exception.GlobalExceptionHandler - LPN Lookup Error: LPN 'BP0013431934' NOT FOUND in Master Database.
+2026-09-10 14:35:02 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.PRLAS.exception.LpnNotFoundException: LPN 'BP0013431934' NOT FOUND in Master Database.]
+2026-09-10 14:35:05 WARN  c.PRLAS.services.impl.LpnServiceImpl - LPN [ BP0013709761 ] NOT FOUND - Scan Time: 2026-09-10T14:35:05.819200400
+2026-09-10 14:35:05 WARN  c.P.exception.GlobalExceptionHandler - LPN Lookup Error: LPN 'BP0013709761' NOT FOUND in Master Database.
+2026-09-10 14:35:05 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.PRLAS.exception.LpnNotFoundException: LPN 'BP0013709761' NOT FOUND in Master Database.]
+2026-09-10 14:35:13 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013709810 | Scanned At: 2026-09-10T14:35:13.602302100
+2026-09-10 14:35:18 WARN  c.PRLAS.services.impl.LpnServiceImpl - LPN [ BP0013431934 ] NOT FOUND - Scan Time: 2026-09-10T14:35:18.933288300
+2026-09-10 14:35:18 WARN  c.P.exception.GlobalExceptionHandler - LPN Lookup Error: LPN 'BP0013431934' NOT FOUND in Master Database.
+2026-09-10 14:35:18 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.PRLAS.exception.LpnNotFoundException: LPN 'BP0013431934' NOT FOUND in Master Database.]
+2026-09-10 14:35:22 WARN  c.PRLAS.services.impl.LpnServiceImpl - LPN [ BP0013709732 ] NOT FOUND - Scan Time: 2026-09-10T14:35:22.428156900
+2026-09-10 14:35:22 WARN  c.P.exception.GlobalExceptionHandler - LPN Lookup Error: LPN 'BP0013709732' NOT FOUND in Master Database.
+2026-09-10 14:35:22 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.PRLAS.exception.LpnNotFoundException: LPN 'BP0013709732' NOT FOUND in Master Database.]
+2026-09-10 14:35:25 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013709815 | Scanned At: 2026-09-10T14:35:25.890230400
+2026-09-10 14:35:29 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013709737 | Scanned At: 2026-09-10T14:35:29.408119700
+2026-09-10 14:36:45 WARN  c.PRLAS.services.impl.LpnServiceImpl - LPN [ BP0013560962 ] NOT FOUND - Scan Time: 2026-09-10T14:36:45.628353800
+2026-09-10 14:36:45 WARN  c.P.exception.GlobalExceptionHandler - LPN Lookup Error: LPN 'BP0013560962' NOT FOUND in Master Database.
+2026-09-10 14:36:45 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.PRLAS.exception.LpnNotFoundException: LPN 'BP0013560962' NOT FOUND in Master Database.]
+2026-09-10 14:36:47 WARN  c.PRLAS.services.impl.LpnServiceImpl - LPN [ BP0013560962 ] NOT FOUND - Scan Time: 2026-09-10T14:36:47.507515900
+2026-09-10 14:36:47 WARN  c.P.exception.GlobalExceptionHandler - LPN Lookup Error: LPN 'BP0013560962' NOT FOUND in Master Database.
+2026-09-10 14:36:47 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.PRLAS.exception.LpnNotFoundException: LPN 'BP0013560962' NOT FOUND in Master Database.]
+2026-09-10 14:36:52 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013709815 | Scanned At: 2026-09-10T14:36:52.357223900
+2026-09-10 14:37:02 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013560961 | Scanned At: 2026-09-10T14:37:02.768749700
+2026-09-10 14:39:46 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m11s863ms50µs200ns).
+2026-09-10 14:53:04 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m17s798ms462µs800ns).
+2026-09-10 15:02:05 INFO  c.PRLAS.services.impl.LpnServiceImpl - Direct MySQL INFILE Import Completed. Rows affected: 8931
+2026-09-10 15:02:24 INFO  c.PRLAS.services.impl.LpnServiceImpl - Direct MySQL INFILE Import Completed. Rows affected: 50663
+2026-09-10 15:02:37 INFO  c.PRLAS.services.impl.LpnServiceImpl - Direct MySQL INFILE Import Completed. Rows affected: 0
+2026-09-10 15:06:53 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0008231030 | Scanned At: 2026-09-10T15:06:53.735324300
+2026-09-10 15:07:22 WARN  c.PRLAS.services.impl.LpnServiceImpl - LPN [ BP31233438 ] NOT FOUND - Scan Time: 2026-09-10T15:07:22.697639900
+2026-09-10 15:07:22 WARN  c.P.exception.GlobalExceptionHandler - LPN Lookup Error: LPN 'BP31233438' NOT FOUND in Master Database.
+2026-09-10 15:07:22 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.PRLAS.exception.LpnNotFoundException: LPN 'BP31233438' NOT FOUND in Master Database.]
+2026-09-10 15:07:33 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013385315 | Scanned At: 2026-09-10T15:07:33.508188900
+2026-09-10 15:07:39 WARN  c.PRLAS.services.impl.LpnServiceImpl - LPN [ BP31233438 ] NOT FOUND - Scan Time: 2026-09-10T15:07:39.136859600
+2026-09-10 15:07:39 WARN  c.P.exception.GlobalExceptionHandler - LPN Lookup Error: LPN 'BP31233438' NOT FOUND in Master Database.
+2026-09-10 15:07:39 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.PRLAS.exception.LpnNotFoundException: LPN 'BP31233438' NOT FOUND in Master Database.]
+2026-09-10 15:11:36 WARN  c.PRLAS.services.impl.LpnServiceImpl - LPN [ BP31415413 ] NOT FOUND - Scan Time: 2026-09-10T15:11:36.671701800
+2026-09-10 15:11:36 WARN  c.P.exception.GlobalExceptionHandler - LPN Lookup Error: LPN 'BP31415413' NOT FOUND in Master Database.
+2026-09-10 15:11:36 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.PRLAS.exception.LpnNotFoundException: LPN 'BP31415413' NOT FOUND in Master Database.]
+2026-09-10 15:11:44 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013617215 | Scanned At: 2026-09-10T15:11:44.619509700
+2026-09-10 15:12:17 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013617229 | Scanned At: 2026-09-10T15:12:17.361569500
+2026-09-10 15:12:24 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013563646 | Scanned At: 2026-09-10T15:12:24.322502
+2026-09-10 15:12:34 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013617213 | Scanned At: 2026-09-10T15:12:34.457607400
+2026-09-10 15:12:47 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013563640 | Scanned At: 2026-09-10T15:12:47.681725700
+2026-09-10 15:13:08 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013617263 | Scanned At: 2026-09-10T15:13:08.802416800
+2026-09-10 15:13:29 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013632610 | Scanned At: 2026-09-10T15:13:29.679979900
+2026-09-10 15:14:39 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013798308 | Scanned At: 2026-09-10T15:14:39.354155500
+2026-09-10 15:15:07 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013722241 | Scanned At: 2026-09-10T15:15:07.746802300
+2026-09-10 15:15:13 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013789943 | Scanned At: 2026-09-10T15:15:13.946441100
+2026-09-10 15:15:57 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013798906 | Scanned At: 2026-09-10T15:15:57.652751200
+2026-09-10 15:15:57 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013798906 | Scanned At: 2026-09-10T15:15:57.771785700
+2026-09-10 15:15:58 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013798906 | Scanned At: 2026-09-10T15:15:57.999578
+2026-09-10 15:15:58 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013798906 | Scanned At: 2026-09-10T15:15:58.135649700
+2026-09-10 15:15:58 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013798906 | Scanned At: 2026-09-10T15:15:58.236497400
+2026-09-10 15:16:07 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013798906 | Scanned At: 2026-09-10T15:16:07.426266700
+2026-09-10 15:16:18 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013557091 | Scanned At: 2026-09-10T15:16:18.028987
+2026-09-10 15:16:35 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013560722 | Scanned At: 2026-09-10T15:16:35.598426400
+2026-09-10 15:16:47 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013798837 | Scanned At: 2026-09-10T15:16:47.465526600
+2026-09-10 15:16:54 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013798306 | Scanned At: 2026-09-10T15:16:54.828038300
+2026-09-10 15:17:04 WARN  c.PRLAS.services.impl.LpnServiceImpl - LPN [ PL09459285 ] NOT FOUND - Scan Time: 2026-09-10T15:17:04.149595100
+2026-09-10 15:17:04 WARN  c.P.exception.GlobalExceptionHandler - LPN Lookup Error: LPN 'PL09459285' NOT FOUND in Master Database.
+2026-09-10 15:17:04 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.PRLAS.exception.LpnNotFoundException: LPN 'PL09459285' NOT FOUND in Master Database.]
+2026-09-10 15:17:13 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP31568073 | Scanned At: 2026-09-10T15:17:13.675065300
+2026-09-10 15:17:23 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013706064 | Scanned At: 2026-09-10T15:17:23.922364300
+2026-09-10 15:17:34 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP29223172 | Scanned At: 2026-09-10T15:17:34.048958300
+2026-09-10 15:17:42 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013633663 | Scanned At: 2026-09-10T15:17:42.360186600
+2026-09-10 15:18:08 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP30628158 | Scanned At: 2026-09-10T15:18:08.765266500
+2026-09-10 15:18:16 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013444626 | Scanned At: 2026-09-10T15:18:16.345207600
+2026-09-10 15:18:23 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0012349863 | Scanned At: 2026-09-10T15:18:23.921452100
+2026-09-10 15:18:31 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013407308 | Scanned At: 2026-09-10T15:18:31.191088700
+2026-09-10 15:18:43 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013556800 | Scanned At: 2026-09-10T15:18:43.172228500
+2026-09-10 15:18:52 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013743392 | Scanned At: 2026-09-10T15:18:52.491593800
+2026-09-10 15:19:07 WARN  c.PRLAS.services.impl.LpnServiceImpl - LPN [ BP31299945 ] NOT FOUND - Scan Time: 2026-09-10T15:19:07.865835200
+2026-09-10 15:19:07 WARN  c.P.exception.GlobalExceptionHandler - LPN Lookup Error: LPN 'BP31299945' NOT FOUND in Master Database.
+2026-09-10 15:19:07 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.PRLAS.exception.LpnNotFoundException: LPN 'BP31299945' NOT FOUND in Master Database.]
+2026-09-10 15:19:09 WARN  c.PRLAS.services.impl.LpnServiceImpl - LPN [ BP31299945 ] NOT FOUND - Scan Time: 2026-09-10T15:19:09.386078200
+2026-09-10 15:19:09 WARN  c.P.exception.GlobalExceptionHandler - LPN Lookup Error: LPN 'BP31299945' NOT FOUND in Master Database.
+2026-09-10 15:19:09 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.PRLAS.exception.LpnNotFoundException: LPN 'BP31299945' NOT FOUND in Master Database.]
+2026-09-10 15:19:12 WARN  c.PRLAS.services.impl.LpnServiceImpl - LPN [ BP31299940 ] NOT FOUND - Scan Time: 2026-09-10T15:19:12.668650500
+2026-09-10 15:19:12 WARN  c.P.exception.GlobalExceptionHandler - LPN Lookup Error: LPN 'BP31299940' NOT FOUND in Master Database.
+2026-09-10 15:19:12 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.PRLAS.exception.LpnNotFoundException: LPN 'BP31299940' NOT FOUND in Master Database.]
+2026-09-10 15:19:31 WARN  c.PRLAS.services.impl.LpnServiceImpl - LPN [ 141BP0013556793 ] NOT FOUND - Scan Time: 2026-09-10T15:19:31.300302200
+2026-09-10 15:19:31 WARN  c.P.exception.GlobalExceptionHandler - LPN Lookup Error: LPN '141BP0013556793' NOT FOUND in Master Database.
+2026-09-10 15:19:31 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.PRLAS.exception.LpnNotFoundException: LPN '141BP0013556793' NOT FOUND in Master Database.]
+2026-09-10 15:19:35 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013660148 | Scanned At: 2026-09-10T15:19:35.192170600
+2026-09-10 15:19:46 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013556785 | Scanned At: 2026-09-10T15:19:46.660775900
+2026-09-10 15:19:59 WARN  c.PRLAS.services.impl.LpnServiceImpl - LPN [ BP31299933 ] NOT FOUND - Scan Time: 2026-09-10T15:19:59.046418300
+2026-09-10 15:19:59 WARN  c.P.exception.GlobalExceptionHandler - LPN Lookup Error: LPN 'BP31299933' NOT FOUND in Master Database.
+2026-09-10 15:19:59 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.PRLAS.exception.LpnNotFoundException: LPN 'BP31299933' NOT FOUND in Master Database.]
+2026-09-10 15:20:06 WARN  c.PRLAS.services.impl.LpnServiceImpl - LPN [ BP31413806 ] NOT FOUND - Scan Time: 2026-09-10T15:20:06.316720
+2026-09-10 15:20:06 WARN  c.P.exception.GlobalExceptionHandler - LPN Lookup Error: LPN 'BP31413806' NOT FOUND in Master Database.
+2026-09-10 15:20:06 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.PRLAS.exception.LpnNotFoundException: LPN 'BP31413806' NOT FOUND in Master Database.]
+2026-09-10 15:20:23 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013556802 | Scanned At: 2026-09-10T15:20:23.833183700
+2026-09-10 15:22:49 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m14s436ms237µs800ns).
+2026-09-10 15:52:22 DEBUG c.P.exception.GlobalExceptionHandler - Static resource not found: favicon.ico
+2026-09-10 15:52:22 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico for request '/favicon.ico'.]
+2026-09-10 16:01:57 DEBUG c.P.exception.GlobalExceptionHandler - Static resource not found: favicon.ico
+2026-09-10 16:01:57 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico for request '/favicon.ico'.]
+2026-09-10 16:02:46 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: Bp0013653266 | Scanned At: 2026-09-10T16:02:46.924865
+2026-09-10 16:10:45 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013565407 | Scanned At: 2026-09-10T16:10:45.176549600
+2026-09-10 16:10:52 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013565407 | Scanned At: 2026-09-10T16:10:52.179061100
+2026-09-10 16:11:10 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013565407 | Scanned At: 2026-09-10T16:11:10.050011300
+2026-09-10 16:11:41 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013312572 | Scanned At: 2026-09-10T16:11:40.998886100
+2026-09-10 16:11:56 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013083779 | Scanned At: 2026-09-10T16:11:56.584769400
+2026-09-10 16:12:01 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013565407 | Scanned At: 2026-09-10T16:12:01.678679800
+2026-09-10 16:12:08 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013689332 | Scanned At: 2026-09-10T16:12:08.042633200
+2026-09-10 16:12:15 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013493549 | Scanned At: 2026-09-10T16:12:15.230623100
+2026-09-10 16:12:24 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013509286 | Scanned At: 2026-09-10T16:12:24.227258500
+2026-09-10 16:12:35 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013689299 | Scanned At: 2026-09-10T16:12:35.152219100
+2026-09-10 16:15:20 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m333ms407µs700ns).
+2026-09-10 16:16:20 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013709784 | Scanned At: 2026-09-10T16:16:20.936780200
+2026-09-10 16:16:36 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013709806 | Scanned At: 2026-09-10T16:16:36.666444500
+2026-09-10 16:16:53 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013709778 | Scanned At: 2026-09-10T16:16:53.581316900
+2026-09-10 16:17:12 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013709744 | Scanned At: 2026-09-10T16:17:12.610469
+2026-09-10 16:17:30 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013709791 | Scanned At: 2026-09-10T16:17:30.165908900
+2026-09-10 16:17:47 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013709804 | Scanned At: 2026-09-10T16:17:47.641689800
+2026-09-10 16:18:05 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013709769 | Scanned At: 2026-09-10T16:18:05.240327300
+2026-09-10 16:18:23 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013709822 | Scanned At: 2026-09-10T16:18:23.180303600
+2026-09-10 16:18:45 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013698341 | Scanned At: 2026-09-10T16:18:45.639212100
+2026-09-10 16:19:10 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013698065 | Scanned At: 2026-09-10T16:19:10.463427100
+2026-09-10 16:19:27 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013170154 | Scanned At: 2026-09-10T16:19:27.477317600
+2026-09-10 16:19:44 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013743342 | Scanned At: 2026-09-10T16:19:44.979231
+2026-09-10 16:20:08 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013478740 | Scanned At: 2026-09-10T16:20:08.637925900
+2026-09-10 16:20:23 INFO  c.PRLAS.services.impl.LpnServiceImpl - LPN FOUND: BP0013660153 | Scanned At: 2026-09-10T16:20:23.094962200
+2026-09-10 16:20:37 WARN  c.PRLAS.services.impl.LpnServiceImpl - LPN [ BP0013407270 ] NOT FOUND - Scan Time: 2026-09-10T16:20:37.637102700
+2026-09-10 16:20:37 WARN  c.P.exception.GlobalExceptionHandler - LPN Lookup Error: LPN 'BP0013407270' NOT FOUND in Master Database.
+2026-09-10 16:20:37 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.PRLAS.exception.LpnNotFoundException: LPN 'BP0013407270' NOT FOUND in Master Database.]
+2026-09-10 16:20:41 WARN  c.PRLAS.services.impl.LpnServiceImpl - LPN [ BP0013407270 ] NOT FOUND - Scan Time: 2026-09-10T16:20:41.100813900
+2026-09-10 16:20:41 WARN  c.P.exception.GlobalExceptionHandler - LPN Lookup Error: LPN 'BP0013407270' NOT FOUND in Master Database.
+2026-09-10 16:20:41 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.PRLAS.exception.LpnNotFoundException: LPN 'BP0013407270' NOT FOUND in Master Database.]
