@@ -1,4 +1,4 @@
-package com.PRLAS.service;
+package com.PRLAS.services;
 
 import com.PRLAS.dto.CsvUploadResponseDTO;
 import com.PRLAS.dto.LpnResponseDTO;

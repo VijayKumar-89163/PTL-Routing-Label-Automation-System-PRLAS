@@ -8,7 +8,7 @@ import com.PRLAS.exception.InvalidCsvException;
 import com.PRLAS.exception.LpnNotFoundException;
 import com.PRLAS.repository.MasterLpnRepository;
 import com.PRLAS.repository.ScanHistoryRepository;
-import com.PRLAS.service.LpnService;
+import com.PRLAS.services.LpnService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -70,16 +70,27 @@ public class LpnServiceImpl implements LpnService {
     }
 
     @Override
-    @Transactional
+    @Transactional(noRollbackFor = LpnNotFoundException.class)
     public LpnResponseDTO scanAndSearchLpn(String lpnQuery) {
         String cleanedLpn = lpnQuery.trim();
         List<MasterLpn> records = masterLpnRepository.findByLpnIgnoreCase(cleanedLpn);
 
         if (records.isEmpty()) {
-            // Option 1: Agar not found wale logs bhi chahiye toh yahan warning log daal sakte hain
-            log.warn("LPN [ {} ] NOT FOUND - Scan Time: {}", cleanedLpn, LocalDateTime.now());
-            throw new LpnNotFoundException("LPN '" + cleanedLpn + "' NOT FOUND in Master Database.");
+            ScanHistory history = ScanHistory.builder()
+                    .lpn(cleanedLpn)
+                    .ptlGroup("NOT FOUND")
+                    .ptlMergedGroups("NOT FOUND")
+                    .location("NOT FOUND")
+                    .build();
+
+            ScanHistory saved = scanHistoryRepository.save(history);
+
+            log.warn("LPN NOT FOUND: {} | Scanned At: {}", cleanedLpn, saved.getScannedAt());
+
+            throw new LpnNotFoundException(
+                    "LPN '" + cleanedLpn + "' NOT FOUND in Master Database.");
         }
+
 
         String ptlGroup = records.get(0).getPtlGroup();
         String location = records.get(0).getLocation();

@@ -3,7 +3,7 @@ package com.PRLAS.controller;
 import com.PRLAS.dto.CsvUploadResponseDTO;
 import com.PRLAS.dto.LpnResponseDTO;
 import com.PRLAS.entity.ScanHistory;
-import com.PRLAS.service.LpnService;
+import com.PRLAS.services.LpnService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
