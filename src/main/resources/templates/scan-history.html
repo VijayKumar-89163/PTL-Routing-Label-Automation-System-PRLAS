@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V-MART PRLAS | Scan History</title>
+
+    <!-- Local (self-hosted) CSS — no internet needed -->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/toastify.min.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="container-fluid p-0 d-flex flex-column flex-lg-row min-vh-100">
+
+    <!-- Sidebar / Header -->
+    <aside class="vm-sidebar p-3">
+        <div class="brand-box text-center py-3 mb-4">
+            <div class="vm-logo mx-auto">V</div>
+            <div>
+                <h5 class="fw-bold m-0 mt-2 text-white">V-MART</h5>
+                <small class="text-light-50 fs-8">PTL-Routing-Label-Automation-System</small>
+            </div>
+        </div>
+        <nav class="nav flex-column gap-2 sidebar-nav">
+            <a class="nav-link" href="/ptl-scanner">
+                <svg class="bi-icon me-2" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M0 .5A.5.5 0 0 1 .5 0h3a.5.5 0 0 1 0 1H1v2.5a.5.5 0 0 1-1 0v-3Zm12 0a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0V1h-2.5a.5.5 0 0 1-.5-.5ZM.5 12a.5.5 0 0 1 .5.5V15h2.5a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5Zm15 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H15v-2.5a.5.5 0 0 1 .5-.5ZM3 3h3v3H3V3Zm0 7h3v3H3v-3Zm7-7h3v3h-3V3ZM7 2H2v5h5V2Zm0 7H2v5h5V9Zm2-7h5v5H9V2ZM4 4h1v1H4V4Zm7 0h1v1h-1V4Zm-6 7H4v1h1v-1Zm3.5-3H8v2h1v1H8v1h2v-2h1v2h1v-1h2v-1h-3V8H8.5Zm1.5 2V9H9v1h1Zm4 3.5V12h-1v1h-2v1h3v-.5Zm-4 .5v-1H8v1h2Zm2-5h2V8h-2v1Z"/></svg>
+                PTL Scanner
+            </a>
+            <a class="nav-link" href="/ptl-dashboard">
+                <svg class="bi-icon me-2" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M0 1a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm9 0a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1zm0 9a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1z"/></svg>
+                Dashboard
+            </a>
+            <a class="nav-link active" href="/scan-history">
+                <svg class="bi-icon me-2" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022zm2.004.45a7 7 0 0 0-.985-.299l.219-.976q.576.129 1.126.342zm1.37.71a7 7 0 0 0-.439-.27l.493-.87a8 8 0 0 1 .979.654l-.615.789a7 7 0 0 0-.418-.302zm1.834 1.79a7 7 0 0 0-.653-.796l.724-.69q.406.429.747.91zm.744 1.352a7 7 0 0 0-.214-.468l.893-.45a8 8 0 0 1 .45 1.088l-.95.313a7 7 0 0 0-.179-.483m.53 2.507a7 7 0 0 0-.1-1.025l.985-.17q.1.58.116 1.17zm-.131 1.538q.05-.254.081-.51l.993.123a8 8 0 0 1-.23 1.155l-.964-.267q.069-.247.12-.501m-.952 2.379q.276-.436.486-.908l.914.405q-.24.54-.555 1.038zm-.964 1.205q.183-.183.35-.378l.758.653a8 8 0 0 1-.401.432z"/><path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0z"/><path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5"/></svg>
+                Scan History
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow-1 p-3 p-md-4">
+
+        <h5 class="fw-bold mb-4 text-vm-navy">SCAN HISTORY</h5>
+
+        <!-- Filter Bar -->
+        <div class="card card-vm p-3 p-md-4 mb-3">
+            <div class="row g-2 align-items-end">
+                <div class="col-6 col-md-3">
+                    <label class="form-label fs-8 fw-bold text-muted mb-1">FROM DATE</label>
+                    <input type="datetime-local" id="fromDateInput" class="form-control">
+                </div>
+                <div class="col-6 col-md-3">
+                    <label class="form-label fs-8 fw-bold text-muted mb-1">TO DATE</label>
+                    <input type="datetime-local" id="toDateInput" class="form-control">
+                </div>
+                <div class="col-6 col-md-2">
+                    <label class="form-label fs-8 fw-bold text-muted mb-1">STATUS</label>
+                    <select id="statusSelect" class="form-select">
+                        <option value="">All</option>
+                        <option value="FOUND">Found</option>
+                        <option value="NOT_FOUND">Not Found</option>
+                    </select>
+                </div>
+                <div class="col-6 col-md-2">
+                    <label class="form-label fs-8 fw-bold text-muted mb-1">SEARCH</label>
+                    <input type="text" id="searchInput" class="form-control" placeholder="LPN / Location">
+                </div>
+                <div class="col-12 col-md-2 d-flex gap-2">
+                    <button class="btn btn-vm-primary flex-grow-1" onclick="applyFilters()">Apply</button>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-end gap-2 mt-3">
+                <div class="dropdown">
+                    <button class="btn btn-outline-dark btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <svg class="bi-icon me-1" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/></svg>
+                        Export
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="exportScanHistory('csv')">Export as CSV</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="exportScanHistory('excel')">Export as Excel</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Table -->
+        <div class="card card-vm p-3 p-md-4">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle border-0 m-0">
+                    <thead class="table-light fs-8">
+                    <tr>
+                        <th>LPN</th>
+                        <th>Group</th>
+                        <th>Location</th>
+                        <th>Zones</th>
+                        <th>Status</th>
+                        <th>Scanned At</th>
+                    </tr>
+                    </thead>
+                    <tbody id="scanHistoryBody">
+                    <tr><td colspan="6" class="text-center py-3 text-muted">No records found</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Pagination -->
+            <div class="d-flex justify-content-between align-items-center mt-3">
+                <small class="text-muted" id="pageInfoText">Page 1</small>
+                <div class="d-flex gap-2">
+                    <button class="btn btn-sm btn-outline-dark" id="prevPageBtn" onclick="changePage(-1)">Previous</button>
+                    <button class="btn btn-sm btn-outline-dark" id="nextPageBtn" onclick="changePage(1)">Next</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</div>
+
+<!-- Local (self-hosted) JS — no internet needed -->
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/js/toastify.min.js}"></script>
+<script th:src="@{/js/scan-history.js}"></script>
+</body>
+</html>

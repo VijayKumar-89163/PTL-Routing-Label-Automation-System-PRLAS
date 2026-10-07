@@ -21,6 +21,12 @@ public class PtlViewController {
         return "ptl-dashboard";
     }
 
+    // Route 3: Scan History (search / date-range / status filter + export)
+    @GetMapping("/scan-history")
+    public String showScanHistoryScreen() {
+        return "scan-history";
+    }
+
     // Fallback Root Route redirecting to Dashboard
     @GetMapping("/")
     public String index() {

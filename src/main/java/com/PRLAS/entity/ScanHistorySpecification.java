@@ -1,6 +1,5 @@
 package com.PRLAS.entity;
 
-import com.PRLAS.entity.ScanHistory;
 import jakarta.persistence.criteria.Predicate;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.util.StringUtils;
@@ -14,7 +13,8 @@ public class ScanHistorySpecification {
     public static Specification<ScanHistory> filterScanHistory(
             String keyword,
             LocalDateTime fromDate,
-            LocalDateTime toDate) {
+            LocalDateTime toDate,
+            ScanStatus status) {
 
         return (root, query, criteriaBuilder) -> {
             List<Predicate> predicates = new ArrayList<>();
@@ -37,6 +37,11 @@ public class ScanHistorySpecification {
             // To Date Filter
             if (toDate != null) {
                 predicates.add(criteriaBuilder.lessThanOrEqualTo(root.get("scannedAt"), toDate));
+            }
+
+            // Status Filter (FOUND / NOT_FOUND). null/absent => ALL (no filter applied)
+            if (status != null) {
+                predicates.add(criteriaBuilder.equal(root.get("status"), status));
             }
 
             return criteriaBuilder.and(predicates.toArray(new Predicate[0]));

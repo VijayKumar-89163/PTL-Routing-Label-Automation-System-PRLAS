@@ -1,5 +1,6 @@
 package com.PRLAS.entity;
 
+import com.PRLAS.entity.ScanStatus;
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDateTime;
@@ -28,6 +29,10 @@ public class ScanHistory {
 
     @Column(length = 50)
     private String location;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "status", length = 20, nullable = false)
+    private ScanStatus status;
 
     @Column(name = "scanned_at", nullable = false)
     private LocalDateTime scannedAt;

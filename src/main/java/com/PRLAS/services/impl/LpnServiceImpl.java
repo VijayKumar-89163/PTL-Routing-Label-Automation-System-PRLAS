@@ -4,6 +4,7 @@ import com.PRLAS.dto.CsvUploadResponseDTO;
 import com.PRLAS.dto.LpnResponseDTO;
 import com.PRLAS.entity.MasterLpn;
 import com.PRLAS.entity.ScanHistory;
+import com.PRLAS.entity.ScanStatus;
 import com.PRLAS.exception.InvalidCsvException;
 import com.PRLAS.exception.LpnNotFoundException;
 import com.PRLAS.repository.MasterLpnRepository;
@@ -75,12 +76,14 @@ public class LpnServiceImpl implements LpnService {
         String cleanedLpn = lpnQuery.trim();
         List<MasterLpn> records = masterLpnRepository.findByLpnIgnoreCase(cleanedLpn);
 
+        // ❌ IF LPN NOT FOUND IN MASTER DB
         if (records.isEmpty()) {
             ScanHistory history = ScanHistory.builder()
                     .lpn(cleanedLpn)
-                    .ptlGroup("NOT FOUND")
-                    .ptlMergedGroups("NOT FOUND")
-                    .location("NOT FOUND")
+                    .ptlGroup("--")
+                    .ptlMergedGroups("--")
+                    .location("--")
+                    .status(ScanStatus.NOT_FOUND) // 🌟 Status Set to NOT_FOUND
                     .build();
 
             ScanHistory saved = scanHistoryRepository.save(history);
@@ -91,7 +94,7 @@ public class LpnServiceImpl implements LpnService {
                     "LPN '" + cleanedLpn + "' NOT FOUND in Master Database.");
         }
 
-
+        // ✅ IF LPN IS FOUND
         String ptlGroup = records.get(0).getPtlGroup();
         String location = records.get(0).getLocation();
         LocalDateTime dbCreatedAt = records.get(0).getCreatedAt();
@@ -111,6 +114,7 @@ public class LpnServiceImpl implements LpnService {
                 .ptlGroup(ptlGroup)
                 .ptlMergedGroups(aggregatedMergedGroups)
                 .location(location)
+                .status(ScanStatus.FOUND) // 🌟 Status Set to FOUND
                 .build();
 
         ScanHistory savedHistory = scanHistoryRepository.save(history);
@@ -127,6 +131,7 @@ public class LpnServiceImpl implements LpnService {
                 .scannedAt(savedHistory.getScannedAt())
                 .build();
     }
+
     @Override
     public List<ScanHistory> getRecentScans() {
         return scanHistoryRepository.findTop5ByOrderByScannedAtDesc();
