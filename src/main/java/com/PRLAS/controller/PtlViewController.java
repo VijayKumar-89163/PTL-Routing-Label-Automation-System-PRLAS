@@ -27,6 +27,12 @@ public class PtlViewController {
         return "scan-history";
     }
 
+    // Route 4: Delete Data (bulk delete on master_lpn_data, password protected)
+    @GetMapping("/delete-data")
+    public String showDeleteDataScreen() {
+        return "delete-data";
+    }
+
     // Fallback Root Route redirecting to Dashboard
     @GetMapping("/")
     public String index() {
