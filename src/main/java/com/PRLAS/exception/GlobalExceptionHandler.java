@@ -46,6 +46,13 @@ public class GlobalExceptionHandler {
         return buildResponse(HttpStatus.BAD_REQUEST, "INVALID_CSV_FILE", ex.getMessage());
     }
 
+    // 2.5. Custom Business Exception: Wrong bulk-delete password
+    @ExceptionHandler(InvalidDeletePasswordException.class)
+    public ResponseEntity<Map<String, Object>> handleInvalidDeletePassword(InvalidDeletePasswordException ex) {
+        log.warn("Bulk Delete Attempt — Wrong Password: {}", ex.getMessage());
+        return buildResponse(HttpStatus.UNAUTHORIZED, "INVALID_DELETE_PASSWORD", ex.getMessage());
+    }
+
     // 3. File Upload Exceptions (Max Size Exceeded or Bad Upload)
     @ExceptionHandler(MaxUploadSizeExceededException.class)
     public ResponseEntity<Map<String, Object>> handleMaxSizeException(MaxUploadSizeExceededException ex) {
